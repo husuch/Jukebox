@@ -1,46 +1,84 @@
-body{
-  margin:0;
-  padding:0;
-}
-.footer-basic-centered{
-  background-color: #292c2f;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: center;
-  font: normal 18px sans-serif;
-
-  padding: 45px;
-  margin-top: 80px;
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
 }
 
-.footer-basic-centered .footer-company-motto{
-  color:  lightgray;
-  font-size: 20px;
-  margin: 0;
-}
-.footer-basic-centered .company{
-  color:  #8d9093;
-  font-size: 20px;
-  margin: 0;
+
+
+
+
+
+
+/* Add a black background color to the top navigation */
+.topNav {
+    background-color: #333;
+    overflow: hidden;
 }
 
-.footer-basic-centered .footer-company-name{
-  color:  #8f9296;
-  font-size: 14px;
-  margin: 0;
+/* Style the links inside the navigation bar */
+.topNav a {
+    float: left;
+    margin-left: 15px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 170%;
 }
 
-.footer-basic-centered .footer-links{
-  list-style: none;
-  font-weight: bold;
-  color:  #ffffff;
-  padding: 35px 0 23px;
-  margin: 0;
+/* Change the color of links on hover */
+.topNav a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-.footer-basic-centered .footer-links a{
-  display:inline-block;
-  text-decoration: none;
-  color: inherit;
+/* Add a color to the active/current link */
+.topNav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.footer-basic-centered {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font: normal 18px sans-serif;
+
+    padding: 45px;
+    margin-top: 80px;
+}
+
+.footer-basic-centered .footer-company-motto {
+    color: lightgray;
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer-basic-centered .company {
+    color: #8d9093;
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer-basic-centered .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-basic-centered .footer-links {
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 35px 0 23px;
+    margin: 0;
+}
+
+.footer-basic-centered .footer-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
 }
