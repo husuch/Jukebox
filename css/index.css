@@ -39,6 +39,12 @@ body {
         grid-row-start: 5;
         grid-row-end: 6;
     }
+    .abba{
+        grid-column-start: 0;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
 
 }
 
