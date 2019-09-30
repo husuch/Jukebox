@@ -12,8 +12,8 @@ body {
     }
 }
 
-
-@media only screen and (min-width: 800px) {
+/*Wenn Display klein wird*/
+@media only screen and (max-width: 800px) {
     .grid-box {
         display: grid;
         width: 100vw;
@@ -39,6 +39,36 @@ body {
         grid-row-start: 5;
         grid-row-end: 6;
     }
+
+}
+
+/*Wenn Display gross genug ist*/
+@media only screen and (min-width: 800px) {
+    .grid-box {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 20% Auto 10% Auto 145px;
+        grid-template-rows: 5% 10% 40% 45% Auto Auto;
+    }
+
+    .topNav {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+
+    .footer-basic-centered {
+
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
 }
 
 /* Add a black background color to the top navigation */
@@ -50,7 +80,7 @@ body {
 /* Style the links inside the navigation bar */
 .topNav a {
     float: left;
-    margin-left: 15%;
+    margin-left: 10%;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
