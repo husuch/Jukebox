@@ -51,7 +51,7 @@ body {
         margin: 0;
         padding: 0;
         grid-template-columns: repeat(12, 8%)4%;
-        grid-template-rows: 50px  repeat(9, 8%) 27% ;
+        grid-template-rows: 50px  repeat(9, 8%) 100px ;
     }
 
     .topNav {
@@ -66,8 +66,8 @@ body {
 
         grid-column-start: 1;
         grid-column-end: 14;
-        grid-row-start: 10;
-        grid-row-end: 12;
+        grid-row-start: 12;
+        grid-row-end: 13;
     }
 }
 
@@ -78,9 +78,9 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-.topNav a {
+.topNav a{
     float: left;
-    margin-left: 12%;
+    margin-left: 10%;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -88,15 +88,26 @@ body {
     font-size: 180%;
 }
 
+.topNav input{
+    margin-left: 10%;
+    background-color: #333;
+    border-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 180%;
+}
+
 
 /* Change the color of links on hover */
-.topNav a:hover{
+.topNav a:hover, input:hover{
     background-color: #ddd;
-color: black;
+    color: black;
 }
 
 /* Add a color to the active/current link */
-.topNav a.active, select.active, option.active{
+.topNav a.active, input.active{
     color: white;
 }
 
