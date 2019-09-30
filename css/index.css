@@ -98,6 +98,11 @@ body {
     text-decoration: none;
     font-size: 180%;
 }
+::placeholder{
+    color: #f2f2f2;
+}
+
+
 
 
 /* Change the color of links on hover */
