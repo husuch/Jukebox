@@ -1,8 +1,9 @@
 <?php
-include_once ('Database/conection.php');
+include_once('Database/connection.php');
 $query="select * from music";
 $result=mysqli_query($query);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
