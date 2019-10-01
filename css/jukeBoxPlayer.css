@@ -130,6 +130,7 @@ body{
 .topNav a:hover, input:hover {
     background-color: #ddd;
     color: black;
+    transition: 200ms;
 }
 
 /* Add a color to the active/current link */
