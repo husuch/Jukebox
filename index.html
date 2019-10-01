@@ -21,8 +21,19 @@
         <input type="text" placeholder="Search..">
     </div>
 
-    <!-- Images -->
-    <div class = "cover">
+
+    <div class="cover">
+
+        <?php
+    $files = scandir('img/');
+    foreach($files as $file) {
+        if($file !== "." && $file !== "..") {
+            echo "<img src='$file' />";
+        }
+        }
+        ?>
+
+        <!-- Images
         <div id ="abbaLive">
             <img class = "img" src="img/abbaLive.jpg" alt="Abba Live">
         </div>
@@ -54,7 +65,7 @@
             <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
         </div>
 
-
+        -->
     </div>
 
     <div class="footer-basic-centered">

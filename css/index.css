@@ -63,7 +63,7 @@ body {
         margin: 0;
         padding: 0;
         grid-template-columns: 10px Auto 10px;
-        grid-template-rows: 50px Auto 300px;
+        grid-template-rows: 50px Auto 225px;
     }
 
     .topNav {
@@ -113,7 +113,7 @@ body {
 /* Style the links inside the navigation bar */
 .topNav a {
     float: left;
-    margin-left: 10%;
+    margin-left: 10vw;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -157,7 +157,6 @@ body {
     font: normal 18px sans-serif;
 
     padding: 45px;
-    margin-top: 80px;
 }
 
 .footer-basic-centered .footer-company-motto {
