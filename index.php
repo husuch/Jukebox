@@ -6,7 +6,7 @@
 
     <link href="css/index.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Jukebox</title>
+    <title>Home</title>
 </head>
 <body>
 
