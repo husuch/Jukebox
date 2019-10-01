@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    background: url("../img/wood.jpg") no-repeat center center fixed;
+    background: url("../background/wood.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -92,12 +92,11 @@ body {
     }
 
     .img {
-        margin: 10px;
+        margin: 8px;
         width: 23.45vw;
-        height: auto;
+        height:  23.45vw;
         float: left;
         position: relative;
-        object-fit: scale-down;
         object-fit: cover;
         border-radius: 5%;
     }
@@ -153,7 +152,8 @@ body {
     background-color: #292c2f;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
-    width: 100%;
+    width: 99vw;
+    margin: 0;
     text-align: center;
     font: normal 18px sans-serif;
 

@@ -13,18 +13,24 @@
 <div class="grid-box">
 
     <div class="topNav">
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-        <a href="index.html"><i class="fas fa-guitar"></i> Rock</a>
+        <a href="index.php"><i class="fas fa-home"></i> Home</a>
+        <a href="index.php"><i class="fas fa-guitar"></i> Rock</a>
         <a href="categories/personalien.html"><i class="fas fa-microphone"></i> Pop</a>
         <a href="categories/hobbys.html"><i class="fab fa-redhat"></i> Jazz</a>
         <a href="categories/fachkentnisse.html"><i class="fas fa-compact-disc"></i> Disco</a>
         <input type="text" placeholder="Search..">
     </div>
 
-
     <div class="cover">
 
-
+        <?php
+        $handle = opendir(dirname(realpath(__FILE__)).'/img/');
+        while($file = readdir($handle)){
+            if($file !== '.' && $file !== '..'){
+                echo '<img class = "img" src="img/'.$file.'" />';
+            }
+        }
+        ?>
         <!-- Images
         <div id ="abbaLive">
             <img class = "img" src="img/abbaLive.jpg" alt="Abba Live">
@@ -65,7 +71,7 @@
         <p class="company">Radio-68</p>
 
         <p class="footer-links">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             ·
             <a href="html/footer/about.html">About</a>
             ·
