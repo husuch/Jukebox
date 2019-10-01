@@ -12,16 +12,16 @@ CREATE TABLE IF NOT EXISTS Musik(
 
 INSERT INTO Musik (ID, Song, Album, Artist, Genre) VALUES
 (1,'Dancing Queen','Arrival','Abba','Pop'),
-(2,'Dancing Queen','Arrival','Abba','Pop'),
-(3,'Dancing Queen','Arrival','Abba','Pop'),
-(4,'Dancing Queen','Arrival','Abba','Pop'),
-(5,'Dancing Queen','Arrival','Abba','Pop'),
-(6,'Dancing Queen','Arrival','Abba','Pop'),
-(7,'Dancing Queen','Arrival','Abba','Pop'),
-(8,'Dancing Queen','Arrival','Abba','Pop'),
-(9,'Dancing Queen','Arrival','Abba','Pop'),
-(10,'Dancing Queen','Arrival','Abba','Pop'),
-(11,'Dancing Queen','Arrival','Abba','Pop'),
+(2,'Dancing Queen','Arrival','Abba','Rock'),
+(3,'Dancing Queen','Arrival','Abba','Metal'),
+(4,'Dancing Queen','Arrival','Abba','Rap'),
+(5,'Dancing Queen','Arrival','Abba','Trap'),
+(6,'Dancing Queen','Arrival','Abba','House'),
+(7,'Dancing Queen','Arrival','Abba','Jazz'),
+(8,'Dancing Queen','Arrival','Abba','Disco'),
+(9,'Dancing Queen','Arrival','Abba','Reggae'),
+(10,'Dancing Queen','Arrival','Abba','Folk'),
+(11,'Dancing Queen','Arrival','Abba','Punk'),
 (12,'Dancing Queen','Arrival','Abba','Pop');
 
 

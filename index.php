@@ -1,9 +1,3 @@
-<?php
-include_once('Database/connection.php');
-$query="select * from music";
-$result=mysqli_query($query);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,23 +13,25 @@ $result=mysqli_query($query);
 <div class="grid-box">
 
     <div class="topNav">
-        <a href="index.php"><i class="fas fa-home"></i> Home</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-guitar"></i> Rock</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-microphone"></i> Pop</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fab fa-redhat"></i> Jazz</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-compact-disc"></i> Disco</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-peace"></i> Reggae</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-fist-raised"></i> Rap</a>
-        <input type="text" placeholder="Search..">
+        <form action="HTML/jukeBoxPlayer.php" method="post">
+            <a href="index.php"><i class="fas fa-home"></i> Home</a>
+            <a href="HTML/jukeBoxPlayer.php" name="rock"><i class="fas fa-guitar"></i> Rock</a>
+            <a href="HTML/jukeBoxPlayer.php" name="pop"><i class="fas fa-microphone"></i> Pop</a>
+            <a href="HTML/jukeBoxPlayer.php" name="jazz"><i class="fab fa-redhat"></i> Jazz</a>
+            <a href="HTML/jukeBoxPlayer.php" name="disco"><i class="fas fa-compact-disc"></i> Disco</a>
+            <a href="HTML/jukeBoxPlayer.php" name="reggae"><i class="fas fa-peace"></i> Reggae</a>
+            <a href="HTML/jukeBoxPlayer.php" name="rap"><i class="fas fa-fist-raised"></i> Rap</a>
+            <input type="text" name="search" placeholder="Search..">
+        </form>
     </div>
 
     <div class="cover">
 
         <?php
-        $handle = opendir(dirname(realpath(__FILE__)).'/img/');
-        while($file = readdir($handle)){
-            if($file !== '.' && $file !== '..'){
-                echo '<a href="HTML/jukeBoxPlayer.html"><img class = "img" src="img/'.$file.'" alt = "'.$file.'"/></a>';
+        $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
+        while ($file = readdir($handle)) {
+            if ($file !== '.' && $file !== '..') {
+                echo '<a href="HTML/jukeBoxPlayer.php"><img class = "img" src="img/' . $file . '" alt = "' . $file . '"/></a>';
             }
         }
         ?>
