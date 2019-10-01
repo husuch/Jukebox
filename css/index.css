@@ -4,6 +4,11 @@ body {
     margin: 0;
     padding: 0;
     font-size: 62.5%;
+    background: url("../img/wood.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 @media only screen and (max-width: 500px) {
@@ -39,7 +44,8 @@ body {
         grid-row-start: 5;
         grid-row-end: 6;
     }
-    .abba{
+
+    .abba {
         grid-column-start: 0;
         grid-column-end: 6;
         grid-row-start: 5;
@@ -56,13 +62,13 @@ body {
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: repeat(12, 8%)4%;
-        grid-template-rows: 50px  repeat(9, 8%) 100px ;
+        grid-template-columns: 10px Auto 10px;
+        grid-template-rows: 50px Auto 300px;
     }
 
     .topNav {
         grid-column-start: 1;
-        grid-column-end: 14;
+        grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
 
@@ -71,13 +77,31 @@ body {
     .footer-basic-centered {
 
         grid-column-start: 1;
-        grid-column-end: 14;
-        grid-row-start: 12;
-        grid-row-end: 13;
-    }
-    img{
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
 
     }
+
+    .cover {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+    }
+
+    .img {
+        margin: 10px;
+        width: 23.45vw;
+        height: auto;
+        float: left;
+        position: relative;
+        object-fit: scale-down;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+
 }
 
 /* Add a black background color to the top navigation */
@@ -87,7 +111,7 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-.topNav a{
+.topNav a {
     float: left;
     margin-left: 10%;
     color: #f2f2f2;
@@ -97,7 +121,7 @@ body {
     font-size: 180%;
 }
 
-.topNav input{
+.topNav input {
     margin-left: 10%;
     background-color: #333;
     border-color: #333;
@@ -107,19 +131,20 @@ body {
     text-decoration: none;
     font-size: 180%;
 }
-::placeholder{
+
+::placeholder {
     color: #f2f2f2;
 }
 
 
 /* Change the color of links on hover */
-.topNav a:hover, input:hover{
+.topNav a:hover, input:hover {
     background-color: #ddd;
     color: black;
 }
 
 /* Add a color to the active/current link */
-.topNav a.active, input.active{
+.topNav a.active, input.active {
     color: white;
 }
 
