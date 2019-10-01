@@ -1,7 +1,6 @@
 @media only screen and (max-width: 500px) {
     body {
         font-size: 40%;
-        background-image: url(../img/halfJukeBox.PNG);
     }
 }
 
@@ -27,6 +26,13 @@
 }
 
 @media only screen and (min-width: 800px) {
+    body{
+        background-image: url("../img/wood.jpg"), url("../img/jukeboxnobackground.png");
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center , center center ;
+
+    }
+
     .grid-box {
         display: grid;
         width: 100vw;
