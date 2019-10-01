@@ -1,12 +1,13 @@
 body{
+    display: grid;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    background-image: url("../background/jukeboxnobackground.png"), url("../background/wood.jpg");
+    background-image: url("../background/jukeboxnobackgroundcut.png"), url("../background/wood.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: center bottom, center center;
+    background-position: center center, center center;
     background-attachment: fixed, fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -21,7 +22,7 @@ body{
 }
 
 /*Wenn Display klein wird*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1055px) {
     .grid-box {
         display: grid;
         width: 100vw;
@@ -29,7 +30,7 @@ body{
         margin: 0;
         padding: 0;
         grid-template-columns: 20% Auto 10% Auto 145px;
-        grid-template-rows: 5% 10% 40% 45% Auto Auto;
+        grid-template-rows: 5% 10% 50% 45% Auto Auto;
     }
 
     .topNav {
@@ -40,26 +41,25 @@ body{
 
     }
 
-
-    .abba {
-        grid-column-start: 0;
-        grid-column-end: 6;
-        grid-row-start: 5;
-        grid-row-end: 6;
+    #juke{
+        grid-row: 4/ 5;
+        grid-column: 2/-1;
+        justify-content: center;
+        align-content: center;
     }
 
 }
 
 /*Wenn Display gross genug ist*/
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1055px) {
     .grid-box {
         display: grid;
         width: 100vw;
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: 10px Auto 10px;
-        grid-template-rows: 50px Auto 225px;
+        grid-template-columns: 10px 500px Auto 500px 10px;
+        grid-template-rows: 50px 450px Auto 225px;
     }
 
     .topNav {
@@ -67,30 +67,20 @@ body{
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
-
     }
 
-
-    .cover {
-        grid-column-start: 2;
+    #juke{
+        grid-column-start: 3;
         grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-content: center;
+        align-content: center;
     }
-
-    .img {
-        margin: 8px;
-        width: 23.45vw;
-        height:  23.45vw;
-        float: left;
-        position: relative;
-        object-fit: cover;
-        border-radius: 5%;
-    }
-
 
 }
+
+
 
 /* Add a black background color to the top navigation */
 .topNav {
@@ -136,4 +126,19 @@ body{
 /* Add a color to the active/current link */
 .topNav a.active, input.active {
     color: white;
+}
+
+#next-songs ul{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#next-songs ul li{
+    list-style: none;
+    background-color: blue;
+}
+
+#next-songs ul li:nth-child(even) {
+    background-color: cornflowerblue;
 }
