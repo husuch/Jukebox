@@ -75,6 +75,9 @@ body {
         grid-row-start: 12;
         grid-row-end: 13;
     }
+    img{
+
+    }
 }
 
 /* Add a black background color to the top navigation */
