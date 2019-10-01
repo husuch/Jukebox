@@ -18,7 +18,7 @@ body {
 }
 
 /*Wenn Display klein wird*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1055px) {
     .grid-box {
         display: grid;
         width: 100vw;
@@ -55,7 +55,7 @@ body {
 }
 
 /*Wenn Display gross genug ist*/
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1055px) {
     .grid-box {
         display: grid;
         width: 100vw;
@@ -142,6 +142,7 @@ body {
 .topNav a:hover, input:hover {
     background-color: #ddd;
     color: black;
+    transition: 200ms;
 }
 
 /* Add a color to the active/current link */
