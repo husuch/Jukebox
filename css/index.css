@@ -112,41 +112,46 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-.topNav a {
-    float: left;
-    margin-left: 2vw;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 180%;
-}
+
 
 .topNav input {
-    margin-left: 2vw;
-    background-color: #484848;
-    border-color: #484848;
+    background-color: #333;
+    border-color: #333;
     color: #f2f2f2;
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
     font-size: 180%;
+    border: none !important;
+    height:50px;
+    width:10vw;
+    position: relative;
+    float: left;
+    margin-left: 10px;
 }
+
 
 ::placeholder {
     color: #f2f2f2;
 }
+#search{
+
+    padding: 10px 12px;
+    font-size: 180%;
+    border: none !important;
+    height:30px;
+}
 
 
 /* Change the color of links on hover */
-.topNav a:hover, input:hover {
+.topNav input:hover {
     background-color: #ddd;
     color: black;
     transition: 200ms;
 }
 
 /* Add a color to the active/current link */
-.topNav a.active, input.active {
+.topNav input.active{
     color: white;
 }
 
@@ -193,3 +198,5 @@ body {
     text-decoration: none;
     color: inherit;
 }
+
+

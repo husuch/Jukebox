@@ -10,16 +10,18 @@
 <body>
 <div class="grid-box">
 
-    <div class="topNav">
-        <a href="../index.php"><i class="fas fa-home"></i> Home</a>
-        <a href="jukeBoxPlayer.php"><i class="fas fa-guitar"></i> Rock</a>
-        <a href="jukeBoxPlayer.php"><i class="fas fa-microphone"></i> Pop</a>
-        <a href="jukeBoxPlayer.php"><i class="fab fa-redhat"></i> Jazz</a>
-        <a href="jukeBoxPlayer.php"><i class="fas fa-compact-disc"></i> Disco</a>
-        <a href="jukeBoxPlayer.php"><i class="fas fa-peace"></i> Reggae</a>
-        <a href="jukeBoxPlayer.php"><i class="fas fa-fist-raised"></i> Rap</a>
-        <input type="text" placeholder="Search..">
-    </div>
+    <form id="topNav" action="jukeBoxPlayer.php" class="topNav">
+
+        <input type="submit" formaction="../index.php" value="Home">
+        <input type="submit" value="Rock">
+        <input type="submit" value="Pop">
+        <input type="submit" value="Jazz">
+        <input type="submit" value="Disco">
+        <input type="submit" value="Reggae">
+        <input type="submit" value="Rap">
+        <input id="search" type="text" name="search" placeholder="Search..">
+
+    </form>
     <!--<img src="../img/halfJukeBox.PNG" alt="" height="464" width="858"> bild-->
     <div id="juke">
         <div id="current-song">
@@ -27,9 +29,8 @@
         </div>
         <div id="next-songs">
             <?php
-            $vorname = $_POST["vorname"];
-            $nachname = $_POST["nachname"];
-            echo "Hallo $vorname $nachname";
+            $style = $_POST["id"];
+            echo "$style";
             ?>
             <ul>
                 <li></li>

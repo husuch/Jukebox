@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <script src="https://kit.fontawesome.com/509accf0a1.js" crossorigin="anonymous"></script>
@@ -12,18 +14,20 @@
 
 <div class="grid-box">
 
-    <div class="topNav">
-        <form action="HTML/jukeBoxPlayer.php" method="post">
-            <a href="index.php"><i class="fas fa-home"></i> Home</a>
-            <a href="HTML/jukeBoxPlayer.php" name="rock"><i class="fas fa-guitar"></i> Rock</a>
-            <a href="HTML/jukeBoxPlayer.php" name="pop"><i class="fas fa-microphone"></i> Pop</a>
-            <a href="HTML/jukeBoxPlayer.php" name="jazz"><i class="fab fa-redhat"></i> Jazz</a>
-            <a href="HTML/jukeBoxPlayer.php" name="disco"><i class="fas fa-compact-disc"></i> Disco</a>
-            <a href="HTML/jukeBoxPlayer.php" name="reggae"><i class="fas fa-peace"></i> Reggae</a>
-            <a href="HTML/jukeBoxPlayer.php" name="rap"><i class="fas fa-fist-raised"></i> Rap</a>
-            <input type="text" name="search" placeholder="Search..">
-        </form>
-    </div>
+
+    <form id="topNav" action="HTML/jukeBoxPlayer.php" class="topNav">
+
+        <input type="submit" formaction="index.php" value="Home">
+        <input type="submit" value="Rock">
+        <input type="submit" value="Pop">
+        <input type="submit" value="Jazz">
+        <input type="submit" value="Disco">
+        <input type="submit" value="Reggae">
+        <input type="submit" value="Rap">
+        <input id="search" type="text" name="search" placeholder="Search..">
+
+    </form>
+
 
     <div class="cover">
 
