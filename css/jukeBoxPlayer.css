@@ -27,7 +27,7 @@
 
 @media only screen and (min-width: 800px) {
     body{
-        background-image: url("../img/wood.jpg"), url("../img/jukeboxnobackground.png");
+        background-image: url("../img/wood.jpg"), url("../background/jukeboxnobackground.png");
         background-repeat: no-repeat, no-repeat;
         background-position: center center , center center ;
 
