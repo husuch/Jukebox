@@ -27,43 +27,10 @@
         $handle = opendir(dirname(realpath(__FILE__)).'/img/');
         while($file = readdir($handle)){
             if($file !== '.' && $file !== '..'){
-                echo '<img class = "img" src="img/'.$file.'" />';
+                echo '<a href="HTML/jukeBoxPlayer.html"><img class = "img" src="img/'.$file.'"/></a>';
             }
         }
         ?>
-        <!-- Images
-        <div id ="abbaLive">
-            <img class = "img" src="img/abbaLive.jpg" alt="Abba Live">
-        </div>
-        <div id ="arrival">
-            <img class = "img" src="img/Arrival.jpg" alt="Arrival">
-        </div>
-        <div id ="highwayToHell1">
-            <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
-        </div>
-        <div id ="highwayToHell2">
-            <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
-        </div>
-        <div id ="highwayToHell3">
-            <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
-        </div>
-        <div id ="highwayToHell4">
-            <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
-        </div>
-        <div id ="highwayToHell5">
-            <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
-        </div>
-        <div id ="highwayToHell6">
-            <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
-        </div>
-        <div id ="highwayToHell7">
-            <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
-        </div>
-        <div id ="highwayToHell8">
-            <img class = "img" src="img/Highway_to_Hell.jpg" alt="Highway to Hell">
-        </div>
-
-        -->
     </div>
 
     <div class="footer-basic-centered">
