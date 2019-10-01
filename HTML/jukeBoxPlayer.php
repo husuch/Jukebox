@@ -12,13 +12,13 @@
 
     <form id="topNav" action="jukeBoxPlayer.php" class="topNav">
 
-        <input type="submit" formaction="../index.php" value="Home">
-        <input type="submit" value="Rock">
-        <input type="submit" value="Pop">
-        <input type="submit" value="Jazz">
-        <input type="submit" value="Disco">
-        <input type="submit" value="Reggae">
-        <input type="submit" value="Rap">
+        <input type="submit" formaction="../index.php" value="Home" name="home">
+        <input type="submit" value="Rock" name="style">
+        <input type="submit" value="Pop" name="style">
+        <input type="submit" value="Jazz" name="style">
+        <input type="submit" value="Disco" name="style">
+        <input type="submit" value="Reggae" name="style">
+        <input type="submit" value="Rap" name="style">
         <input id="search" type="text" name="search" placeholder="Search..">
 
     </form>
@@ -29,8 +29,32 @@
         </div>
         <div id="next-songs">
             <?php
-            $style = $_POST["id"];
+            $style = $_GET["style"];
             echo "$style";
+
+            switch ($style) {
+                case "Rock":
+                    echo "Style ist Rock";
+                    break;
+                case "Pop":
+                    echo "Style ist Pop";
+                    break;
+                case "Jazz":
+                    echo "Style ist Jazz";
+                    break;
+
+                case "Disco":
+                    echo "Style ist Disco";
+                    break;
+
+                case "Reggae":
+                    echo "Style ist Reggae";
+                    break;
+
+                case "Rap":
+                    echo "Style ist Rap";
+                    break;
+            }
             ?>
             <ul>
                 <li></li>
