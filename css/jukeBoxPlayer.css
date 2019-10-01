@@ -27,7 +27,7 @@
 
 @media only screen and (min-width: 800px) {
     body{
-        background-image: url("../img/wood.jpg"), url("../background/jukeboxnobackground.png");
+        background-image: url("../background/wood.jpg"), url("../background/jukeboxnobackground.png");
         background-repeat: no-repeat, no-repeat;
         background-position: center center , center center ;
 
@@ -97,6 +97,8 @@
 
 #juke{
     justify-content: center;
+    grid-row-start:4;
+    grid-row-start:5;
 }
 #next-songs ul{
     display:grid;
