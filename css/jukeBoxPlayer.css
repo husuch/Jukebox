@@ -99,7 +99,7 @@ body {
 /* Style the links inside the navigation bar */
 .topNav a {
     float: left;
-    margin-left: 10vw;
+    margin-left: 2vw;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -108,7 +108,7 @@ body {
 }
 
 .topNav input {
-    margin-left: 10%;
+    margin-left: 2vw;
     background-color: #333;
     border-color: #333;
     color: #f2f2f2;

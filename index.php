@@ -14,10 +14,12 @@
 
     <div class="topNav">
         <a href="index.php"><i class="fas fa-home"></i> Home</a>
-        <a href="index.php"><i class="fas fa-guitar"></i> Rock</a>
-        <a href="categories/personalien.html"><i class="fas fa-microphone"></i> Pop</a>
-        <a href="categories/hobbys.html"><i class="fab fa-redhat"></i> Jazz</a>
-        <a href="categories/fachkentnisse.html"><i class="fas fa-compact-disc"></i> Disco</a>
+        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-guitar"></i> Rock</a>
+        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-microphone"></i> Pop</a>
+        <a href="HTML/jukeBoxPlayer.html"><i class="fab fa-redhat"></i> Jazz</a>
+        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-compact-disc"></i> Disco</a>
+        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-peace"></i> Reggae</a>
+        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-fist-raised"></i> Rap</a>
         <input type="text" placeholder="Search..">
     </div>
 
