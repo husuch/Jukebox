@@ -29,7 +29,7 @@
         $handle = opendir(dirname(realpath(__FILE__)).'/img/');
         while($file = readdir($handle)){
             if($file !== '.' && $file !== '..'){
-                echo '<a href="HTML/jukeBoxPlayer.html"><img class = "img" src="img/'.$file.'"/></a>';
+                echo '<a href="HTML/jukeBoxPlayer.html"><img class = "img" src="img/'.$file.'" alt = "'.$file.'"/></a>';
             }
         }
         ?>
