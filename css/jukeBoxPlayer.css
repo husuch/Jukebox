@@ -1,6 +1,7 @@
 @media only screen and (max-width: 500px) {
     body {
         font-size: 40%;
+        background-image: url(../img/halfJukeBox.PNG);
     }
 }
 
@@ -45,14 +46,62 @@
     }
 }
 
+/* Add a black background color to the top navigation */
+.topNav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topNav a{
+    float: left;
+    margin-left: 10%;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 180%;
+}
+
+.topNav input{
+    margin-left: 10%;
+    background-color: #333;
+    border-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 180%;
+}
+::placeholder{
+    color: #f2f2f2;
+}
+
+
+/* Change the color of links on hover */
+.topNav a:hover, input:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topNav a.active, input.active{
+    color: white;
+}
+
 #juke{
     justify-content: center;
 }
-#next-songs{
+#next-songs ul{
     display:grid;
-    background-color: black;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
-#next-songs:nth-child(even) {
-    background-color: gray;
+#next-songs ul li{
+    background-color: blue;
+}
+
+#next-songs ul li:nth-child(even) {
+    background-color: cornflowerblue;
 }
