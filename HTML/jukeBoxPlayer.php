@@ -56,17 +56,31 @@
                     break;
             }
             ?>
-            <ul>
-                <li>Hello</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+
+            <ul id="nav">
+                <?php
+                $con = mysqli_connect("localhost", "root", "", "jukebox");
+
+                $result = mysqli_query($con, "SELECT * FROM Musik");
+
+
+                while ($row=mysqli_fetch_array($result)) {
+
+                    if($row['Genre'] == $style) {
+                        echo $row['Artist'];
+                        echo "<br>";
+                    }
+                    else{
+                        echo "Wrong Genre";
+                        echo "<br>";
+                    }
+             }
+
+
+                ?>
             </ul>
+
+
         </div>
         <div id="audio">
             <audio src="" controls id="audioPlayer"></audio>

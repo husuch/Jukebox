@@ -2,7 +2,7 @@
 DROP DATABASE IF EXISTS jukebox;
 CREATE DATABASE IF NOT EXISTS jukebox;
 USE jukebox;
-CREATE TABLE IF NOT EXISTS Musik(
+CREATE TABLE IF NOT EXISTS musik(
                                     ID SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
                                     Song VARCHAR(45) NOT NULL,
                                     Album VARCHAR(45) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS Musik(
                                     Genre VARCHAR(45) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO Musik (ID, Song, Album, Artist, Genre) VALUES
+INSERT INTO musik (ID, Song, Album, Artist, Genre) VALUES
 (1,'Dancing Queen','Arrival','Abba','Pop'),
 (2,'Dancing Queen','Arrival','Abba','Rock'),
 (3,'Dancing Queen','Arrival','Abba','Metal'),
