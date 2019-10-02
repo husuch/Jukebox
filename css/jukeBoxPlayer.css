@@ -23,16 +23,6 @@ body{
 
 /*Wenn Display klein wird*/
 @media only screen and (max-width: 1055px) {
-    body{
-        background-image: url("../background/jukeboxnobackground.png"), url("../background/wood.jpg");
-        background-repeat: no-repeat, no-repeat;
-        background-position: center center, center center;
-        background-attachment: fixed, fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
 
     .grid-box {
         display: grid;
