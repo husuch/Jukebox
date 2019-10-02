@@ -10,7 +10,7 @@
 <body>
 <div class="grid-box">
 
-    <form id="topNav" action="jukeBoxPlayer.php" class="topNav">
+    <form id="topNav" action="jukeBoxPlayer.php" class="topNav" method="post">
 
         <input type="submit" formaction="../index.php" value="Home" name="home">
         <input type="submit" value="Rock" name="style">
@@ -28,41 +28,19 @@
 
         </div>
         <div id="next-songs">
-            <?php
-            $style = $_GET["style"];
-            echo "$style";
-            switch ($style) {
-                case "Rock":
-                    echo "Style ist Rock";
-                    break;
-                case "Pop":
-                    echo "Style ist Pop";
-                    break;
-                case "Jazz":
-                    echo "Style ist Jazz";
-                    break;
-                case "Disco":
-                    echo "Style ist Disco";
-                    break;
-                case "Reggae":
-                    echo "Style ist Reggae";
-                    break;
-                case "Rap":
-                    echo "Style ist Rap";
-                    break;
-            }
-            ?>
+
 
             <ul id="nav">
                 <?php
+                $style = $_POST["style"];
                 $con = mysqli_connect("localhost", "root", "", "jukebox");
                 $result = mysqli_query($con, "SELECT * FROM Music");
-                while ($row=mysqli_fetch_array($result)) {
-                    if($row['Genre'] == $style) {
+                while ($row = mysqli_fetch_array($result)) {
+                    if ($row['Genre'] == $style) {
                         echo $row['Artist'];
+                        echo $row['Mp3Path'];
                         echo "<br>";
-                    }
-                    else{
+                    } else {
                         echo "Wrong Genre";
                         echo "<br>";
                     }
@@ -72,8 +50,16 @@
 
 
         </div>
+
         <div id="audio">
-            <audio src="" controls id="audioPlayer"></audio>
+            <?php
+
+            ?>
+            <audio controls>
+
+                <source src="<?php  mysqli_query($con, "SELECT * FROM Music WHERE ID = 1"); ?>" type="audio/ogg">
+
+            </audio>
         </div>
     </div>
 </div>
