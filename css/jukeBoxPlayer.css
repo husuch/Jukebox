@@ -119,13 +119,44 @@ body{
 ::placeholder {
     color: #f2f2f2;
 }
-#search{
-    float: right;
+#shuffle{
+
     padding: 10px 12px;
     font-size: 180%;
     border: none !important;
-    height:30px;
 
+}
+
+.topNav .search-container {
+    float: right;
+
+}
+
+.topNav input[type=text] {
+    padding: 6px;
+    margin-top: 0px;
+    font-size: 180%;
+
+    color: #292c2f;
+    background-color: white;
+    border: none !important;
+}
+::placeholder{
+    color: #8d9093;
+}
+.topNav .search-container button {
+    float: right;
+    padding: 15px 25px;
+    margin-top: 0px;
+    margin-right: 0px;
+    background: dodgerblue;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topNav .search-container button:hover {
+    background: deepskyblue;
 }
 
 

@@ -17,7 +17,15 @@
     <input type="submit" value="Jazz" name="style">
     <input type="submit" value="Disco" name="style">
     <input type="submit" value="Reggae" name="style">
-    <input id="search" type="text" name="search" placeholder="Search..">
+    <input id="shuffle" type="submit" value="Shuffle" name="style" style="background-color: green">
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+
 
 </form>
 
