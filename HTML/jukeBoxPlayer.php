@@ -31,35 +31,32 @@
 
 
             <ul id="nav">
-                <?php
-                $style = $_POST["style"];
-                $con = mysqli_connect("localhost", "root", "", "jukebox");
-                $result = mysqli_query($con, "SELECT * FROM Music");
-                while ($row = mysqli_fetch_array($result)) {
-                    if ($row['Genre'] == $style) {
-                        echo $row['Artist'];
-                        echo $row['Mp3Path'];
-                        echo "<br>";
-                    } else {
-                        echo "Wrong Genre";
-                        echo "<br>";
-                    }
-                }
-                ?>
+
             </ul>
 
 
         </div>
 
         <div id="audio">
+
             <?php
 
+            $style = $_POST["style"];
+            $con = mysqli_connect("localhost", "root", "", "jukebox");
+            $result = mysqli_query($con, "SELECT * FROM Music");
+            while ($row = mysqli_fetch_array($result)) {
+                if ($row['Genre'] == $style) {
+                    echo $row['Artist'];
+                    echo "<br>";
+                } else {
+
+                }
+            }
             ?>
-            <audio controls>
-
-                <source src="<?php  mysqli_query($con, "SELECT * FROM Music WHERE ID = 1"); ?>" type="audio/ogg">
-
+            <audio src="../Mp3/Abba_DancingQueen.mp3" controls>
+                <p>Your browser does not support the audio element.</p>
             </audio>
+
         </div>
     </div>
 </div>
