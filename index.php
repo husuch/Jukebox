@@ -15,7 +15,7 @@
 <div class="grid-box">
 
 
-    <form id="topNav" action="HTML/jukeBoxPlayer.php" class="topNav" method="POST">
+    <form id="topNav" action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
 
         <input type="submit" formaction="index.php" value="Home" name="home">
         <input type="submit" value="Rock" name="style">
@@ -34,7 +34,7 @@
         $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
         while ($file = readdir($handle)) {
             if ($file !== '.' && $file !== '..') {
-                echo '<a href="HTML/jukeBoxPlayer.php"><img class = "img" src="img/' . $file . '" alt = "' . $file . '"/></a>';
+                echo '<a href="PhP/jukeBoxPlayer.php"><img class = "img" src="img/' . $file . '" alt = "' . $file . '"/></a>';
             }
         }
         ?>
