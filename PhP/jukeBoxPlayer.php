@@ -9,22 +9,54 @@
 </head>
 <body>
 <div class="grid-box">
-<form action="jukeBoxPlayer.php" class="topNav" method="post">
+    <form action="jukeBoxPlayer.php" class="topNav" method="post">
 
-    <input type="submit" formaction="../index.php" value="Home" name="home">
-    <input type="submit" value="Rock" name="style">
-    <input type="submit" value="Pop" name="style">
-    <input type="submit" value="Jazz" name="style">
-    <input type="submit" value="Disco" name="style">
-    <input type="submit" value="Reggae" name="style">
-    <input id="search" type="text" name="search" placeholder="Search..">
+        <input type="submit" formaction="../index.php" value="Home" name="home">
+        <input type="submit" value="Rock" name="style">
+        <input type="submit" value="Pop" name="style">
+        <input type="submit" value="Jazz" name="style">
+        <input type="submit" value="Disco" name="style">
+        <input type="submit" value="Reggae" name="style">
+        <input id="search" type="text" name="search" placeholder="Search..">
 
-</form>
+    </form>
+    <div class="audio">
+        <t>
+            <th>Artist</th>
+            <th>Genre</th>
+            <th>Song</th>
+            <th>Mp3Path</th>
+        </t>
+    <?php
+    include_once("../Database/connection.php");
+    $con = new mysqli("localhost", "root", "", "jukebox");
+    $select = "Select * from music";
+    $result = mysqli_query($con, $select);
+    $style = $_POST['style'];
 
-<audio class="audio" controls="controls" autoplay="true" loop="loop">
-    <source src="../Mp3/Abba%20-%20Dancing%20Queen.mp3" type="audio/mpeg" />
-</audio>
+    while ($rows = mysqli_fetch_assoc($result)) {
+        if ($rows['Genre'] == $style) {
+            ?>
+            <tr
+            <td><?php echo $rows['Artist']; ?></td>
+            <td><?php echo $rows['Genre']; ?></td>
+            <td><?php echo $rows['Song']; ?></td>
+            <td><?php echo $rows['Mp3Path']; ?></td>
+            </tr>
+            <audio class="audio" controls="controls" autoplay="true">
+                <source src="<?php $rows['Mp3Path']; ?>" type="audio/mpeg"/>
+            </audio>
+            <?php
+        } else {
+            echo "nei";
+        }
+    }
+    echo $style;
 
+    ?>
+
+
+</div>
 </div>
 </body>
 </html>
