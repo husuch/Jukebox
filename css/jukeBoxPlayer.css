@@ -135,14 +135,11 @@ body{
     color: white;
 }
 
-#next-songs{
-
-}
-
-#next-songs ul{
+#next-songs {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 0.1em;
+    grid-gap: 2px;
     margin: auto;
     height: 15vw;
     width: 15vw;
