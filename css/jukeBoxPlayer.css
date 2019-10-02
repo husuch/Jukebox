@@ -13,7 +13,9 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
+
 
 @media only screen and (max-width: 500px) {
     body {
@@ -31,23 +33,16 @@ body{
         margin: 0;
         padding: 0;
         grid-template-columns: 20% Auto 10% Auto 145px;
-        grid-template-rows: 5% 10% 50% 45% Auto Auto;
+        grid-template-rows: 50px 10% 50% 45% Auto Auto;
+
     }
 
     .topNav {
         grid-column-start: 1;
         grid-column-end: 6;
-        grid-row-start: 0;
-        grid-row-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
 
-    }
-
-    #juke{
-        grid-row: 4/ 5;
-        grid-column: 2/-1;
-        z-index: 3;
-        justify-content: center;
-        align-content: center;
     }
 
 }
@@ -71,13 +66,7 @@ body{
         grid-row-end: 2;
     }
 
-    #juke{
-        grid-column-start: 3;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-        z-index: 3;
-    }
+
 
 }
 
@@ -134,20 +123,14 @@ body{
     color: white;
 }
 
-#next-songs{
-    height: 27vw;
-    width: 27vw;
-    background-color: aqua;
+#next-songs ul{
+    display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 0.1em;
 }
 
-#current-song{
-    height: 9vw;
-    width: 9vw;
-    margin: auto;
-    background-color: blueviolet;
+#current{
+    background-color: chocolate;
 }
 
 #next-songs ul li{
