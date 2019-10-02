@@ -139,6 +139,10 @@ body{
     grid-template-rows: repeat(3, 1fr);
 }
 
+#current{
+    background-color: chocolate;
+}
+
 #next-songs ul li{
     list-style: none;
     background-color: blue;
