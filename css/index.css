@@ -25,32 +25,43 @@ body {
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: 20% Auto 10% Auto 145px;
-        grid-template-rows: 5% 10% 40% 45% Auto Auto;
+        grid-template-columns: 5% Auto 10% Auto 5%;
+        grid-template-rows: 50px 10% 40% 45% Auto Auto;
     }
 
     .topNav {
         grid-column-start: 1;
         grid-column-end: 6;
-        grid-row-start: 0;
-        grid-row-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
 
     }
 
     .footer-basic-centered {
 
-        grid-column-start: 0;
+        grid-column-start: 1;
         grid-column-end: 6;
         grid-row-start: 5;
         grid-row-end: 6;
+    }
+    .cover {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
     }
 
-    .abba {
-        grid-column-start: 0;
-        grid-column-end: 6;
-        grid-row-start: 5;
-        grid-row-end: 6;
+    .img {
+        margin: 8px;
+        width: 15vw; /*23.45vw*/
+        height: 15vw;
+        float: left;
+        position: relative;
+        object-fit: cover;
+        border-radius: 5%;
     }
+
 
 }
 
@@ -63,7 +74,7 @@ body {
         margin: 0;
         padding: 0;
         grid-template-columns: 10px Auto 10px;
-        grid-template-rows: 50px Auto 225px;
+        grid-template-rows: 50px 250px Auto 225px;
     }
 
     .topNav {
@@ -78,23 +89,23 @@ body {
 
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
 
     }
 
     .cover {
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
 
     }
 
     .img {
         margin: 8px;
-        width: 23.45vw;
-        height:  23.45vw;
+        width: 15vw; /*23.45vw*/
+        height: 15vw;
         float: left;
         position: relative;
         object-fit: cover;
@@ -198,5 +209,3 @@ body {
     text-decoration: none;
     color: inherit;
 }
-
-
