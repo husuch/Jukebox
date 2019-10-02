@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    background-image: url("../background/jukeboxnobackgroundcut.png"), url("../background/wood.jpg");
+    background-image: url("../background/jukeboxnobackground.png"), url("../background/wood.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-attachment: fixed, fixed;
@@ -45,6 +45,7 @@ body{
     #juke{
         grid-row: 4/ 5;
         grid-column: 2/-1;
+        z-index: 3;
         justify-content: center;
         align-content: center;
     }
@@ -75,8 +76,7 @@ body{
         grid-column-end: 3;
         grid-row-start: 3;
         grid-row-end: 4;
-        justify-content: center;
-        align-content: center;
+        z-index: 3;
     }
 
 }
@@ -134,14 +134,20 @@ body{
     color: white;
 }
 
-#next-songs ul{
-    display:grid;
+#next-songs{
+    height: 27vw;
+    width: 27vw;
+    background-color: aqua;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.1em;
 }
 
-#current{
-    background-color: chocolate;
+#current-song{
+    height: 9vw;
+    width: 9vw;
+    margin: auto;
+    background-color: blueviolet;
 }
 
 #next-songs ul li{

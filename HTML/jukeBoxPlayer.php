@@ -22,7 +22,6 @@
         <input id="search" type="text" name="search" placeholder="Search..">
 
     </form>
-    <!--<img src="../img/halfJukeBox.PNG" alt="" height="464" width="858"> bild-->
     <div id="juke">
         <div id="current-song">
 
@@ -47,7 +46,6 @@
                 }
                 ?>
             </ul>
-
 
         </div>
 

@@ -74,7 +74,7 @@ body {
         margin: 0;
         padding: 0;
         grid-template-columns: 10px Auto 10px;
-        grid-template-rows: 50px 250px Auto 225px;
+        grid-template-rows: 50px 45% Auto 225px;
     }
 
     .topNav {
