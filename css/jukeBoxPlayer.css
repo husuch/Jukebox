@@ -23,6 +23,7 @@ body{
 
 /*Wenn Display klein wird*/
 @media only screen and (max-width: 1055px) {
+
     .grid-box {
         display: grid;
         width: 100vw;
