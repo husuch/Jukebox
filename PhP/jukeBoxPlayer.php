@@ -8,8 +8,8 @@
     <title>Jukebox</title>
 </head>
 <body>
-
-<form id="topNav" action="jukeBoxPlayer.php" class="topNav" method="post">
+<div class="grid-box">
+<form action="jukeBoxPlayer.php" class="topNav" method="post">
 
     <input type="submit" formaction="../index.php" value="Home" name="home">
     <input type="submit" value="Rock" name="style">
@@ -21,10 +21,10 @@
 
 </form>
 
-<audio controls="controls" autoplay="true" loop="loop">
+<audio class="audio" controls="controls" autoplay="true" loop="loop">
     <source src="song.php" type="audio/mpeg" />
 </audio>
 
-
+</div>
 </body>
 </html>

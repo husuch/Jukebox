@@ -15,7 +15,7 @@
 <div class="grid-box">
 
 
-    <form id="topNav" action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
+    <form action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
 
         <input type="submit" formaction="index.php" value="Home" name="home">
         <input type="submit" value="Rock" name="style">
