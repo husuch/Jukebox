@@ -10,6 +10,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -80,7 +81,7 @@ body {
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: 10px Auto 10px;
+        grid-template-columns: 1% Auto 1% ;
         grid-template-rows: 50px 250px Auto 225px;
     }
 

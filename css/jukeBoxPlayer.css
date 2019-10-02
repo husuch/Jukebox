@@ -32,7 +32,7 @@ body{
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: 20% Auto 10% Auto 145px;
+        grid-template-columns: 20% 10% 10% Auto 145px;
         grid-template-rows: 50px 10% 50% 45% Auto Auto;
 
     }
@@ -44,6 +44,13 @@ body{
         grid-row-end: 2;
 
     }
+    .audio{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
 
 }
 
