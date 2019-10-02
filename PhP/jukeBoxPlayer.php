@@ -29,8 +29,41 @@
 
 </form>
 
-<audio class="audio" controls="controls" autoplay="true" loop="loop">
-    <source src="../Mp3/Abba%20-%20Dancing%20Queen.mp3" type="audio/mpeg" />
+    <div class="audio">
+        <t>
+            <th>Artist</th>
+            <th>Genre</th>
+            <th>Song</th>
+            <th>Mp3Path</th>
+        </t>
+        <?php
+        include_once("../Database/connection.php");
+        $con = new mysqli("localhost", "root", "", "jukebox");
+        $select = "Select * from music";
+        $result = mysqli_query($con, $select);
+        $style = $_POST['style'];
+
+        while ($rows = mysqli_fetch_assoc($result)) {
+            if ($rows['Genre'] == $style) {
+                ?>
+                <tr
+                <td><?php echo $rows['Artist']; ?></td>
+                <td><?php echo $rows['Genre']; ?></td>
+                <td><?php echo $rows['Song']; ?></td>
+                <td><?php echo $rows['Mp3Path']; ?></td>
+                </tr>
+                <audio class="audio" controls="controls" autoplay="true">
+                    <source src="<?php echo'$rows["Mp3Path"]'; ?>" type="audio/mp3"/>
+                </audio>
+                <?php
+            } else {
+                echo "nei";
+            }
+        }
+        echo $style;
+
+        ?>
+
 </audio>
 
 </div>
