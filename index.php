@@ -15,14 +15,14 @@
 <div class="grid-box">
 
 
-    <form id="topNav" action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
+    <form id="topNav" action="PhP/jukeBoxPlayer.php" class="topNav" method="GET">
 
         <input type="submit" formaction="index.php" value="Home" name="home">
-        <input type="submit" value="Rock" name="style">
-        <input type="submit" value="Pop" name="style">
-        <input type="submit" value="Jazz" name="style">
-        <input type="submit" value="Disco" name="style">
-        <input type="submit" value="Reggae" name="style">
+        <input type="submit" value="Rock" name="hash">
+        <input type="submit" value="Pop" name="hash">
+        <input type="submit" value="Jazz" name="hash">
+        <input type="submit" value="Disco" name="hash">
+        <input type="submit" value="Reggae" name="hash">
         <input id="search" type="text" name="search" placeholder="Search..">
 
     </form>

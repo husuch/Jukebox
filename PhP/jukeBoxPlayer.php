@@ -22,8 +22,16 @@
 
 </form>
 
-<audio controls="controls" autoplay="true" loop="loop">
-    <source src="song.php" type="audio/mpeg" />
+<?php
+
+$mysqli = new mysqli('localhost','root','','jukebox');
+$rand = mt_rand();
+$hash = md5($rand);
+$result = $mysqli->query("insert into hashes (hash,used) values('$hash',0)");
+
+?>
+<audio controls>
+    <source src="song.php?hash=<?=$hash?>" type="audio/mpeg">
 </audio>
 
 
