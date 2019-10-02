@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    background-image: url("../background/jukeboxnobackgroundcut.png"), url("../background/wood.jpg");
+    background-image: url("../background/jukeboxnobackground.png"), url("../background/wood.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-attachment: fixed, fixed;
@@ -13,7 +13,9 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
+
 
 @media only screen and (max-width: 500px) {
     body {
@@ -31,22 +33,16 @@ body{
         margin: 0;
         padding: 0;
         grid-template-columns: 20% Auto 10% Auto 145px;
-        grid-template-rows: 5% 10% 50% 45% Auto Auto;
+        grid-template-rows: 50px 10% 50% 45% Auto Auto;
+
     }
 
     .topNav {
         grid-column-start: 1;
         grid-column-end: 6;
-        grid-row-start: 0;
-        grid-row-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
 
-    }
-
-    #juke{
-        grid-row: 4/ 5;
-        grid-column: 2/-1;
-        justify-content: center;
-        align-content: center;
     }
 
 }
@@ -70,14 +66,7 @@ body{
         grid-row-end: 2;
     }
 
-    #juke{
-        grid-column-start: 3;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-        justify-content: center;
-        align-content: center;
-    }
+
 
 }
 
