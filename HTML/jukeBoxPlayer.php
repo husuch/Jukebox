@@ -31,7 +31,6 @@
             <?php
             $style = $_GET["style"];
             echo "$style";
-
             switch ($style) {
                 case "Rock":
                     echo "Style ist Rock";
@@ -42,15 +41,12 @@
                 case "Jazz":
                     echo "Style ist Jazz";
                     break;
-
                 case "Disco":
                     echo "Style ist Disco";
                     break;
-
                 case "Reggae":
                     echo "Style ist Reggae";
                     break;
-
                 case "Rap":
                     echo "Style ist Rap";
                     break;
@@ -60,12 +56,8 @@
             <ul id="nav">
                 <?php
                 $con = mysqli_connect("localhost", "root", "", "jukebox");
-
-                $result = mysqli_query($con, "SELECT * FROM Musik");
-
-
+                $result = mysqli_query($con, "SELECT * FROM Music");
                 while ($row=mysqli_fetch_array($result)) {
-
                     if($row['Genre'] == $style) {
                         echo $row['Artist'];
                         echo "<br>";
@@ -74,9 +66,7 @@
                         echo "Wrong Genre";
                         echo "<br>";
                     }
-             }
-
-
+                }
                 ?>
             </ul>
 

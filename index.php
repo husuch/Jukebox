@@ -1,10 +1,7 @@
-<?php
-include_once ('Database/connection.php');
-$query="select * from music";
-$result=mysqli_query($query);
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <script src="https://kit.fontawesome.com/509accf0a1.js" crossorigin="anonymous"></script>
@@ -17,24 +14,28 @@ $result=mysqli_query($query);
 
 <div class="grid-box">
 
-    <div class="topNav">
-        <a href="index.php"><i class="fas fa-home"></i> Home</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-guitar"></i> Rock</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-microphone"></i> Pop</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fab fa-redhat"></i> Jazz</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-compact-disc"></i> Disco</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-peace"></i> Reggae</a>
-        <a href="HTML/jukeBoxPlayer.html"><i class="fas fa-fist-raised"></i> Rap</a>
-        <input type="text" placeholder="Search..">
-    </div>
+
+    <form id="topNav" action="HTML/jukeBoxPlayer.php" class="topNav" method="GET">
+
+        <input type="submit" formaction="index.php" value="Home" name="home">
+        <input type="submit" value="Rock" name="style">
+        <input type="submit" value="Pop" name="style">
+        <input type="submit" value="Jazz" name="style">
+        <input type="submit" value="Disco" name="style">
+        <input type="submit" value="Reggae" name="style">
+        <input type="submit" value="Rap" name="style">
+        <input id="search" type="text" name="search" placeholder="Search..">
+
+    </form>
+
 
     <div class="cover">
 
         <?php
-        $handle = opendir(dirname(realpath(__FILE__)).'/img/');
-        while($file = readdir($handle)){
-            if($file !== '.' && $file !== '..'){
-                echo '<a href="HTML/jukeBoxPlayer.html"><img class = "img" src="img/'.$file.'" alt = "'.$file.'"/></a>';
+        $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
+        while ($file = readdir($handle)) {
+            if ($file !== '.' && $file !== '..') {
+                echo '<a href="HTML/jukeBoxPlayer.php"><img class = "img" src="img/' . $file . '" alt = "' . $file . '"/></a>';
             }
         }
         ?>
