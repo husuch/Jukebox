@@ -141,14 +141,3 @@ body{
 #next-songs ul li:nth-child(even) {
     background-color: cornflowerblue;
 }
-button {
-    width: 60px; height: 60px;
-}
-button.playing {
-    background: url(http://i.imgur.com/kHz4ihY.png) no-repeat;
-    background-size: cover;
-}
-button.paused {
-    background: url(http://i.imgur.com/DKCYmP2.png) no-repeat;
-    background-size: cover;
-}

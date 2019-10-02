@@ -13,7 +13,7 @@ body {
 
 @media only screen and (max-width: 500px) {
     body {
-        font-size: 40%;
+        font-size: 50%;
     }
 }
 
@@ -25,7 +25,7 @@ body {
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: 5% Auto 10% Auto 5%;
+        grid-template-columns: 5% Auto 40% Auto 5%;
         grid-template-rows: 50px 10% 40% 45% Auto Auto;
     }
 
@@ -35,6 +35,12 @@ body {
         grid-row-start: 1;
         grid-row-end: 2;
 
+    }
+    .titel{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
 
     .footer-basic-centered {
@@ -84,6 +90,13 @@ body {
         grid-row-end: 2;
 
     }
+    .titel{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
 
     .footer-basic-centered {
 
@@ -114,6 +127,13 @@ body {
 
 
 }
+/*Design des Titels*/
+.titel{
+    color: cornflowerblue;
+    font-family: "Arial Black";
+    font-size: 2vmax;
+}
+
 
 /* Add a black background color to the top navigation */
 .topNav {
@@ -135,7 +155,7 @@ body {
     font-size: 180%;
     border: none !important;
     height:50px;
-    width:10vw;
+    width:15vmin;
     position: relative;
     float: left;
     margin-left: 10px;
@@ -146,7 +166,7 @@ body {
     color: #f2f2f2;
 }
 #search{
-
+    float: right;
     padding: 10px 12px;
     font-size: 180%;
     border: none !important;
