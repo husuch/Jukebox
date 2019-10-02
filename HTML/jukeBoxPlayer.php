@@ -18,7 +18,6 @@
         <input type="submit" value="Jazz" name="style">
         <input type="submit" value="Disco" name="style">
         <input type="submit" value="Reggae" name="style">
-        <input type="submit" value="Rap" name="style">
         <input id="search" type="text" name="search" placeholder="Search..">
 
     </form>
