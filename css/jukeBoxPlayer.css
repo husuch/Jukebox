@@ -42,15 +42,6 @@ body{
         grid-column-end: 6;
         grid-row-start: 1;
         grid-row-end: 2;
-    }
-
-
-    #juke{
-        grid-row: 4/ 5;
-        grid-column: 2/-1;
-        z-index: 3;
-        justify-content: center;
-        align-content: center;
 
     }
 
@@ -75,14 +66,11 @@ body{
         grid-row-end: 2;
     }
 
-    #juke {
-        grid-column-start: 3;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-        z-index: 3;
-    }
+
+
 }
+
+
 
 /* Add a black background color to the top navigation */
 .topNav {
@@ -104,7 +92,7 @@ body{
     font-size: 180%;
     border: none !important;
     height:50px;
-    width:10vw;
+    width:15vmin;
     position: relative;
     float: left;
     margin-left: 10px;
@@ -115,7 +103,7 @@ body{
     color: #f2f2f2;
 }
 #search{
-
+    float: right;
     padding: 10px 12px;
     font-size: 180%;
     border: none !important;
@@ -135,22 +123,14 @@ body{
     color: white;
 }
 
-#next-songs {
-    display: grid;
+#next-songs ul{
+    display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 2px;
-    margin: auto;
-    height: 15vw;
-    width: 15vw;
-    background-color: aqua;
 }
 
-#current-song{
-    height: 5vw;
-    width: 5vw;
-    margin: auto;
-    background-color: blueviolet;
+#current{
+    background-color: chocolate;
 }
 
 #next-songs ul li{
