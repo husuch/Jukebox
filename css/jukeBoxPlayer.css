@@ -136,20 +136,22 @@ body{
 }
 
 #next-songs{
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 0.1em;
+
 }
 
 #next-songs ul{
-    height: 27vw;
-    width: 27vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.1em;
+    margin: auto;
+    height: 15vw;
+    width: 15vw;
     background-color: aqua;
 }
 
 #current-song{
-    height: 9vw;
-    width: 9vw;
+    height: 5vw;
+    width: 5vw;
     margin: auto;
     background-color: blueviolet;
 }
