@@ -47,9 +47,11 @@
             while ($row = mysqli_fetch_array($result)) {
                 if ($row['Genre'] == $style) {
                     echo $row['Artist'];
+                    echo $row['Mp3Path'];
                     echo "<br>";
                 } else {
-
+                    echo "Wrong Genre";
+                    echo "<br>";
                 }
             }
             ?>
