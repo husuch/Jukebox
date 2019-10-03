@@ -71,7 +71,7 @@ body{
         margin: 0;
         padding: 0;
         grid-template-columns: 30px 30px 500px Auto 500px 10px;
-        grid-template-rows: 50px 5% 450px Auto 225px;
+        grid-template-rows: 50px 10% 450px Auto 225px;
     }
 
     .topNav {
@@ -96,14 +96,14 @@ body{
 
     }
     .knopf{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
     .playlistliste{
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 7;
         grid-row-start: 2;
         grid-row-end: 3;
     }
@@ -230,18 +230,24 @@ body{
 
 table{
     margin-left: 0;
+    border: none;
+    /*
     border-color: white;
-    border-style: solid;
+    border-style: groove;
     border-width:  3px;
+    */
     font-size: 150%;
     outline: none;
 }
 
 th, td {
     outline: none;
+    border: none;
+    /*
     border-color: white;
-    border-style: double;
+    border-style: groove;
     border-width:  3px;
+    */
     color: #14ac5f;
 }
 #mitte{
@@ -255,9 +261,9 @@ th, td {
     color: #14ac5f;
 }
 #player{
+    color: black;
+    font-size: 50px;
 
-    padding: 0px 680px;
-    position: center;
 }
 
 
@@ -269,6 +275,7 @@ th{
 td{
     font-size: 100%;
     font-weight: lighter;
+    text-align:center;
 }
 .tableForm{
     border: transparent;
