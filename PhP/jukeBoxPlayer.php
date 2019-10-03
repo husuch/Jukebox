@@ -93,17 +93,18 @@
         }
 
         ?>
-
-        <button onclick="document.getElementById('myTune').play()">Play</button>
-        <button onclick="document.getElementById('myTune').pause()">Pause</button>
-        <button onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
+    </div>
+    <div class="knopf">
+        <button class="buttoncool" id="play" onclick="document.getElementById('myTune').play()">Play</button>
+        <button class="buttoncool" id="pause" onclick="document.getElementById('myTune').pause()">Pause</button>
+        <button class="buttoncool" id="reset" onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
             Reset Music
         </button>
-        <button onclick="document.getElementById('myTune').volume+=0.1">Volume Up</button>
-        <button onclick="document.getElementById('myTune').currentTime+=30">Speed Up</button>
-        <button onclick="document.getElementById('myTune').volume-=0.1">Volume Down</button>
-        <button onclick="document.getElementById('myTune').volume-=2">Mute</button>
-        <button onclick="document.getElementById('myTune').volume+=2">Unmute</button>
+        <button class="buttoncool" id="up" onclick="document.getElementById('myTune').volume+=0.1">Volume Up</button>
+        <button class="buttoncool" id="speed" onclick="document.getElementById('myTune').currentTime+=30">Speed Up</button>
+        <button class="buttoncool" id="down" onclick="document.getElementById('myTune').volume-=0.1">Volume Down</button>
+        <button class="buttoncool" id="mute" onclick="document.getElementById('myTune').volume-=2">Mute</button>
+        <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=2">Unmute</button>
     </div>
 
 </div>
