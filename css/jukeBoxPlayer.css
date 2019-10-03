@@ -13,6 +13,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    outline: none;
 
 }
 
@@ -85,9 +86,14 @@ body{
         grid-column-end: 4;
         grid-row-start: 3;
         grid-row-end: 4;
-        background-attachment: fixed;
-    }
 
+    }
+    .knopf{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
 
 }
 
@@ -197,53 +203,64 @@ body{
 #next-songs ul li:nth-child(even) {
     background-color: cornflowerblue;
 }
-#img,#omg,#cd{
-
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.button1{
-
-    background: transparent;
-    border: transparent;
-    height: 0px;
-    width: 0px;
-    border: none;
-    /*outline: none;*/
-}
-
-#buttonimage1{
-    height: 100px;
-    width: 200px;
-}
-#buttonimage2{
-
-    height: 50px;
-    width: 100px;
-}
-#buttonimage3{
-
-    height: 150px;
-    width: 175px;
-}
-
 
 table {
     margin-left: 0;
     width: 30vw;
-    border-color: #8d9093;
-    border-style: dashed;
+    border-color: white;
+    border-style: solid;
+    border-width:  3px;
     font-size: 180%;
 }
 
 th, td {
-    border-color: black;
-    border-style: dashed;
-    font-size: 180%;
+    border-color: white;
+    border-style: double;
+    border-width:  3px;
+    font-size: 160%;
+    font-weight: bold;
     color: #14ac5f;
+}
+.buttoncool{
+    height: 40px;
+    width: 70px;
+    border-radius: 12px;
+    float: left;
+    outline: none;
+    background-color: goldenrod;
+    border-color: goldenrod;
+}
+#play{
+
+    margin-top: 280px;
+    margin-left: 125px;
+    position: fixed;
+}
+#pause{
+    margin-top: 280px;
+    margin-left: 300px;
+    position: fixed;
+}
+#reset{
+
+}
+#up{
+
+}
+#down{
+
+}
+#mute{
+    margin-top: 220px;
+    margin-left: -120px;
+    position: fixed;
+
+}
+#unmute{
+    margin-top: 220px;
+    margin-left: -10px;
+    position: fixed;
+}
+#speed{
+
 }
