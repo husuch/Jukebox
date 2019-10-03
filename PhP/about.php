@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/509accf0a1.js" crossorigin="anonymous"></script>
 
     <link href="../css/index.css" rel="stylesheet">
-    <link href="../css/about.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
