@@ -65,24 +65,29 @@
             $loadSource = 0;
             $source = array();
             $i = 0;
-            while ($rows = mysqli_fetch_assoc($result)) {
-                if ((strcasecmp($rows['Genre'], $styleInput) == 0 or strcasecmp($rows['Genre'], $searchInput) == 0) or (strcasecmp($rows['Artist'], $artistInput) == 0 or strcasecmp($rows['Artist'], $searchInput) == 0) or (strcasecmp($rows['Album'], $searchInput) == 0) or (strcasecmp($rows['Song'], $searchInput) == 0)) {
-
-                    $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
-                    $loadSource = $loadSource + 1;
-                    ?>
-                    <tr>
-                        <td><?php echo $rows['Artist'] ?></td>
-                        <td><?php echo $rows['Album'] ?></td>
-                        <td><?php echo $rows['Song'] ?></td>
-                        <td><?php echo $rows['Genre'] ?></td>
-                    </tr>
-                    <?php
-                } else {
-                    echo "";
-                }
-            }
             ?>
+            <form action="jukeBoxPlayer.php" method="post" class="tableForm">
+                <?php
+                while ($rows = mysqli_fetch_assoc($result)) {
+                    if ((strcasecmp($rows['Genre'], $styleInput) == 0 or strcasecmp($rows['Genre'], $searchInput) == 0) or (strcasecmp($rows['Artist'], $artistInput) == 0 or strcasecmp($rows['Artist'], $searchInput) == 0) or (strcasecmp($rows['Album'], $searchInput) == 0) or (strcasecmp($rows['Song'], $searchInput) == 0)) {
+
+                        $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
+                        $loadSource = $loadSource + 1;
+                        ?>
+                        <tr>
+                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>" name="band"></td>
+                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?> " name="search"></td>
+                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?> " name="search"></td>
+                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?> " name="style"></td>
+                        </tr>
+
+                        <?php
+                    } else {
+                        echo "";
+                    }
+                }
+                ?>
+            </form>
         </table>
     </div>
     <div class="sound">
