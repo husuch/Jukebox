@@ -33,7 +33,9 @@
 
     </form>
     <div class="titel">
+        <img id="logo" src="background/logoNoBackground.png" alt="logo">
     <h1>Hit-Radio 68</h1>
+
     </div>
 
     <div class="cover">
