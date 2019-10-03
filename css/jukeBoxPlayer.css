@@ -75,10 +75,17 @@ body{
     }
 
     .audio{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 5;
+    }
+    .sound{
         grid-column-start: 3;
         grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background-attachment: fixed;
     }
 
 
@@ -223,4 +230,20 @@ body{
 
     height: 150px;
     width: 175px;
+}
+
+
+table {
+    margin-left: 0;
+    width: 30vw;
+    border-color: #8d9093;
+    border-style: dashed;
+    font-size: 180%;
+}
+
+th, td {
+    border-color: black;
+    border-style: dashed;
+    font-size: 180%;
+    color: #14ac5f;
 }
