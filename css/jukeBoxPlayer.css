@@ -83,8 +83,8 @@ body{
     }
 
     .audio{
-        grid-column-start: 2;
-        grid-column-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 7;
         grid-row-start: 3;
         grid-row-end: 6;
     }
