@@ -248,46 +248,41 @@ th, td {
     border-style: groove;
     border-width:  3px;
     */
-    color: white;
+    color: #14ac5f;
 }
 #mitte{
     outline: none;
     border: none;
-    color: white;
+    color: #14ac5f;
 }
 #inhalte{
     outline: none;
     border: none;
-    color: white;
+    color: #14ac5f;
 }
 #player{
-    text-decoration: none;
-    color: white;
-    text-shadow: black;
-    font-size: 400%;
+    color: black;
+    font-size: 50px;
+
 }
 
 
 th{
- text-decoration: underline overline;
-  padding: 0px 75px;
-    font-size: 190%;
+  padding: 0px 100px;
+    font-size: 120%;
     font-weight: bold;
-    color: white;
-
 }
 td{
     font-size: 100%;
     font-weight: lighter;
     text-align:center;
-    color:white;
 }
 .tableForm{
     border: transparent;
     background: transparent;
     font-size: 100%;
     font-weight: bold;
-    color: white;
+    color: #14ac5f;
 }
 
 .buttoncool{
@@ -332,11 +327,4 @@ td{
 }
 #speed{
 
-}
-#Gif{
-    position: fixed;
-    margin-top: 130px ;
-    margin-left: 100px;
-    width: 200px;
-    height: 80px;
 }

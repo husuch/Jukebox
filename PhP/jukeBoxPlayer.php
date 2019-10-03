@@ -27,11 +27,11 @@
     </form>
 
     <div class="playlistliste">
-       <table>
-           <th id="player">
-              Playlist
-           </th>
-       </table>
+        <table>
+            <th id="player">
+                Playlist
+            </th>
+        </table>
 
     </div>
 
@@ -53,10 +53,11 @@
             $select = "Select * from music";
             $result = mysqli_query($con, $select);
 
-            $searchInput = "1";
-            $artistInput = "1";
-            $styleInput = "1";
-            $shuffle = "1";
+            $searchInput = "";
+            $artistInput = "";
+            $styleInput = "";
+            $shuffle = "";
+            $shuffleBool = false;
             IF (isset($_POST['style'])) {
                 $styleInput = $_POST['style'];
             }
@@ -67,6 +68,7 @@
                 $searchInput = $_POST['search'];
             }
             IF (isset($_POST['shuffle'])) {
+                $shuffleBool = true;
                 $shuffle = $_POST['shuffle'];
             }
             $loadSource = 0;
@@ -75,24 +77,51 @@
             ?>
             <form action="jukeBoxPlayer.php" method="post" class="tableForm">
                 <?php
-                while ($rows = mysqli_fetch_assoc($result)) {
-                    if ((strcasecmp($rows['Genre'], $styleInput) == 0 or strcasecmp($rows['Genre'], $searchInput) == 0) or (strcasecmp($rows['Artist'], $artistInput) == 0 or strcasecmp($rows['Artist'], $searchInput) == 0) or (strcasecmp($rows['Album'], $searchInput) == 0) or (strcasecmp($rows['Song'], $searchInput) == 0)) {
+                if ($shuffle != true) {
+                    while ($rows = mysqli_fetch_assoc($result)) {
+                        if ((strcasecmp($rows['Genre'], $styleInput) == 0 or strcasecmp($rows['Genre'], $searchInput) == 0) or (strcasecmp($rows['Artist'], $artistInput) == 0) or (strcasecmp($rows['Album'], $searchInput) == 0) or (strcasecmp($rows['Song'], $searchInput) == 0)) {
 
-                        $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
-                        $loadSource = $loadSource + 1;
-                        ?>
-                        <tr>
-                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>" name="band"></td>
-                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?> " name="search"></td>
-                            <td id="inhalte"></td>
-                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?> " name="search"></td>
-                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?> " name="style"></td>
+                            $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
+                            $loadSource = $loadSource + 1;
+                            ?>
+                            <tr>
+                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>"
+                                           name="band"></td>
+                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?> "
+                                           name="search"></td>
+                                <td id="inhalte"></td>
+                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?> "
+                                           name="search"></td>
+                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?> "
+                                           name="style"></td>
 
-                        </tr>
+                            </tr>
 
-                        <?php
-                    } else {
-                        echo "";
+                            <?php
+                        } else {
+                            echo "";
+                        }
+                    }
+                } else if (isset($shuffle)) {
+                    while ($rows = mysqli_fetch_assoc($result)) {
+                        $rand = rand(3, 6);
+                        if ($rows['ID']%$rand >2) {
+                            ?>
+                            <tr>
+                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>"
+                                           name="band"></td>
+                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?> "
+                                           name="search"></td>
+                                <td id="inhalte"></td>
+                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?> "
+                                           name="search"></td>
+                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?> "
+                                           name="style"></td>
+
+                            </tr>
+
+                            <?php
+                        }
                     }
                 }
                 ?>
