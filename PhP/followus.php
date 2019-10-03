@@ -40,10 +40,8 @@
 
     <div id="content">
 
-        <h2>Über uns</h2>
-        <p>Wir sind eine Radiozentrale, welche nicht wie alle die neuesten Lieder spielt,
-            sondern zurück in die klassische Zeiten geht. Unsere. Wir haben eine grosse Auswahl von Liedern von verschiedenen
-            Künstlern wie AC/DC bis zu Bob Marley. </p>
+        <h2>Folgen sie Hit-Radio 68 auf</h2>
+        <p>Facebook, Instagram</p>
     </div>
 
     <div class="footer-basic-centered">

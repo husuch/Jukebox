@@ -59,9 +59,9 @@
             ·
             <a href="PhP/about.php">About</a>
             ·
-            <a href="html/footer/contact.html">Contact</a>
+            <a href="PhP/contact.php">Contact</a>
             ·
-            <a href="html/footer/followus.html">Follow us</a>
+            <a href="PhP/followus.php">Follow us</a>
         </p>
 
         <p class="footer-company-name">Radio-68 &copy; 2019</p>
