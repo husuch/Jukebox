@@ -19,7 +19,7 @@ body{
 
 @media only screen and (max-width: 500px) {
     body {
-        font-size: 50%;
+        font-size: 40%;
     }
 }
 
@@ -32,7 +32,7 @@ body{
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: 20% 10% 10% Auto 145px;
+        grid-template-columns: 20% Auto 10% Auto 145px;
         grid-template-rows: 50px 10% 50% 45% Auto Auto;
 
     }
@@ -44,13 +44,6 @@ body{
         grid-row-end: 2;
 
     }
-    .audio{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-
 
 }
 
@@ -67,19 +60,12 @@ body{
     }
 
     .topNav {
-
         grid-column-start: 1;
         grid-column-end: 6;
         grid-row-start: 1;
         grid-row-end: 2;
     }
 
-    .audio{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
 
 
 }
@@ -91,7 +77,6 @@ body{
     background-color: #333;
     overflow: hidden;
     padding: 0;
-
 }
 
 /* Style the links inside the navigation bar */
@@ -107,56 +92,22 @@ body{
     font-size: 180%;
     border: none !important;
     height:50px;
-    min-width: 15vmin;
-    max-width: 16vmax;
+    width:15vmin;
     position: relative;
     float: left;
     margin-left: 10px;
-
 }
 
 
 ::placeholder {
     color: #f2f2f2;
 }
-#shuffle{
-
+#search{
+    float: right;
     padding: 10px 12px;
     font-size: 180%;
     border: none !important;
-
-}
-
-.topNav .search-container {
-    float: right;
-
-}
-
-.topNav input[type=text] {
-    padding: 6px;
-    margin-top: 0px;
-    font-size: 180%;
-
-    color: #292c2f;
-    background-color: white;
-    border: none !important;
-}
-::placeholder{
-    color: #8d9093;
-}
-.topNav .search-container button {
-    float: right;
-    padding: 15px 25px;
-    margin-top: 0px;
-    margin-right: 0px;
-    background: dodgerblue;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-}
-
-.topNav .search-container button:hover {
-    background: deepskyblue;
+    height:30px;
 }
 
 

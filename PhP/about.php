@@ -6,7 +6,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <script src="https://kit.fontawesome.com/509accf0a1.js" crossorigin="anonymous"></script>
 
-    <link href="css/index.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/about.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
@@ -33,21 +34,16 @@
 
     </form>
     <div class="titel">
-        <img id="logo" src="background/logoNoBackground.png" alt="logo">
+        <img id="logo" src="../background/logoNoBackground.png" alt="logo">
     <h1>Hit-Radio 68</h1>
-
     </div>
 
-    <div class="cover">
+    <div id="content">
 
-        <?php
-        $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
-        while ($file = readdir($handle)) {
-            if ($file !== '.' && $file !== '..') {
-                echo '<a href="PhP/jukeBoxPlayer.php"><img class = "img" src="img/' . $file . '" alt = "' . $file . '"/></a>';
-            }
-        }
-        ?>
+        <h2>Über uns</h2>
+        <p>Wir sind eine Radiozentrale, welche nicht wie alle die neuesten Lieder spielt,
+            sondern zurück in die klassische Zeiten geht. Unsere. Wir haben eine grosse Auswahl von Liedern von verschiedenen
+            Künstlern wie AC/DC bis zu Bob Marley. </p>
     </div>
 
     <div class="footer-basic-centered">
