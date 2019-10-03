@@ -5,15 +5,10 @@
     <meta charset="UTF-8">
     <link href="../css/jukeBoxPlayer.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/509accf0a1.js" crossorigin="anonymous"></script>
-
     <title>Jukebox</title>
 </head>
 <body>
-<section id="img" >
-    <section id="omg">
- <section id="cd">
 <div class="grid-box">
-
     <form action="jukeBoxPlayer.php" class="topNav" method="POST">
 
         <input type="submit" formaction="../index.php" value="Home" name="home">
@@ -24,7 +19,7 @@
         <input type="submit" value="Reggae" name="style">
         <input id="shuffle" type="submit" value="Shuffle" name="style" style="background-color: green">
         <div class="search-container">
-            <form action="jukeBoxPlayer.php">
+            <form action="/action_page.php">
                 <input type="text" placeholder="Search..." name="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
@@ -32,28 +27,6 @@
 
 
     </form>
-
-    <div class="buttons">
-    <button class="button1" type="button" onclick="back1()" ><img src="../background/60icon.png" id="buttonimage1" alt=""> </button>
-    <button class="button1" type="button" onclick="back2()"><img src="../background/70iconTHICC.png" id="buttonimage2" alt=""> </button>
-    <button class="button1" type="button" onclick="back3()"><img src="../background/80icon.png" id="buttonimage3" alt=""> </button>
-        <script>
-            function back1(){
-
-                document.getElementById('img').style.backgroundImage = 'url(../background/background1.png)';
-            }
-        </script>
-        <script>
-            function back2(){
-                document.getElementById('omg').style.backgroundImage = 'url(../background/background2.png)';
-            }
-        </script>
-        <script>
-            function back3(){
-                document.getElementById('cd').style.backgroundImage = 'url(../background/background3.png)';
-            }
-        </script>
-    </div>
 
     <div class="audio">
 
@@ -112,9 +85,5 @@
         <button onclick="document.getElementById('myTune').volume-=0.1">Volume Down</button>
 
     </div>
-    </section>
-    </section>
-</section>
-
 </body>
 </html>
