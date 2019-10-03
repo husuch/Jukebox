@@ -61,10 +61,10 @@ body {
 
     }
 
-    .img {
+    .img, input{
         margin: 8px;
-        width: 15vw; /*23.45vw*/
-        height: 15vw;
+        width: 12vw; /*23.45vw*/
+        height: 12vw;
         float: left;
         position: relative;
         object-fit: cover;
@@ -279,4 +279,5 @@ body {
     text-decoration: none;
     color: inherit;
 }
+
 

@@ -15,7 +15,6 @@
 
 <div class="grid-box">
 
-
     <form action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
 
         <input type="submit" formaction="../index.php" value="Home" name="home">
@@ -41,8 +40,8 @@
     <div id="content">
 
         <h2>Über uns</h2>
-        <p>Wir sind eine Radiozentrale, welche nicht wie alle die neuesten Lieder spielt,
-            sondern zurück in die klassische Zeiten geht. Unsere. Wir haben eine grosse Auswahl von Liedern von verschiedenen
+        <p>Wir sind eine Radiozentrale, welche nicht die neuesten Lieder spielt wie die meisten Radiokanale heutzutage,
+            wir gehen zurück in die klassischen Zeiten. Wir haben eine grosse Auswahl von Liedern von verschiedenen
             Künstlern wie AC/DC bis zu Bob Marley. </p>
     </div>
 
