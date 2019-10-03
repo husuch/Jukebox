@@ -23,10 +23,10 @@
         <input type="submit" value="Jazz" name="style">
         <input type="submit" value="Disco" name="style">
         <input type="submit" value="Reggae" name="style">
-        <input id="shuffle" type="submit" value="Shuffle" name="style" style="background-color: green">
+        <input id="shuffle" type="submit" value="Shuffle" name="shuffle" style="background-color: green">
         <div class="search-container">
             <form action="php/jukeBoxPlayer.php" method="post">
-                <input type="text" placeholder="Search..." name="style">
+                <input type="text" placeholder="Search..." name="search">
                 <button type="submit" formaction="php/jukeBoxPlayer.php"><i class="fa fa-search"></i></button>
             </form>
 
@@ -43,11 +43,21 @@
     <div class="cover">
         <form action="PhP/jukeBoxPlayer.php" method="POST">
             <?php
-            $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
-            while ($file = readdir($handle)) {
-                if ($file !== '.' && $file !== '..') {
-                    $name = explode("_", $file);
-                    echo '<input type="image" value='.$name[0].' class = "img" src="img/' . $file . '" name="style">';
+
+            $con = new mysqli("localhost", "root", "", "jukebox");
+            $select = "Select * from music";
+            $result = mysqli_query($con, $select);
+            $alreadyIn = "";
+
+            while ($rows = mysqli_fetch_assoc($result)) {
+                if (strpos($alreadyIn, $rows['ImagePath']) === FALSE) {
+                        $alreadyIn = $alreadyIn.$rows['ImagePath'];
+                    ?>
+                    <input type="image" value="<?php echo $rows['Artist'] ?>" class="img"
+                           src="<?php echo $rows['ImagePath'] ?>" name="band" alter="<?php echo $rows['Album'];?>">
+                    <?php
+                } else {
+                    echo "";
                 }
             }
             ?>

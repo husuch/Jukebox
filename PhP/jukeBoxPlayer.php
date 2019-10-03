@@ -17,11 +17,11 @@
         <input type="submit" value="Jazz" name="style">
         <input type="submit" value="Disco" name="style">
         <input type="submit" value="Reggae" name="style">
-        <input id="shuffle" type="submit" value="Shuffle" name="style" style="background-color: green">
+        <input id="shuffle" type="submit" value="shuffle" name="shuffle" style="background-color: green">
         <div class="search-container">
             <form action="jukeBoxPlayer.php" method="post">
-                <input type="text" placeholder="Search..." name="style">
-                <button type="submit" formaction="php/jukeBoxPlayer.php"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit" formaction="jukeBoxPlayer.php"><i class="fa fa-search"></i></button>
             </form>
         </div>
     </form>
@@ -29,6 +29,9 @@
     <div class="audio">
 
         <table>
+            <tr>
+                <th colspan="4">Playlist</th>
+            </tr>
             <tr>
                 <th>Artist</th>
                 <th>Album</th>
@@ -42,12 +45,28 @@
             $con = new mysqli("localhost", "root", "", "jukebox");
             $select = "Select * from music";
             $result = mysqli_query($con, $select);
-            $input = $_POST['style'];
+
+            $searchInput = "1";
+            $artistInput = "1";
+            $styleInput = "1";
+            $shuffle = "1";
+            IF (isset($_POST['style'])) {
+                $styleInput = $_POST['style'];
+            }
+            IF (isset($_POST['band'])) {
+                $artistInput = $_POST['band'];
+            }
+            IF (isset($_POST['search'])) {
+                $searchInput = $_POST['search'];
+            }
+            IF (isset($_POST['shuffle'])) {
+                $shuffle = $_POST['shuffle'];
+            }
             $loadSource = 0;
             $source = array();
             $i = 0;
             while ($rows = mysqli_fetch_assoc($result)) {
-                if (($rows['Genre'] == $input) or ($rows['Artist']== $input) or ($rows['Album'] == $input) or ($rows['Song'] == $input)) {
+                if ((strcasecmp($rows['Genre'], $styleInput) == 0 or strcasecmp($rows['Genre'], $searchInput) == 0) or (strcasecmp($rows['Artist'], $artistInput) == 0 or strcasecmp($rows['Artist'], $searchInput) == 0) or (strcasecmp($rows['Album'], $searchInput) == 0) or (strcasecmp($rows['Song'], $searchInput) == 0)) {
 
                     $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                     $loadSource = $loadSource + 1;
@@ -95,14 +114,17 @@
     <div class="knopf">
         <button class="buttoncool" id="play" onclick="document.getElementById('myTune').play()">Play</button>
         <button class="buttoncool" id="pause" onclick="document.getElementById('myTune').pause()">Pause</button>
-        <button class="buttoncool" id="reset" onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
+        <button class="buttoncool" id="reset"
+                onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
             Reset Music
         </button>
         <button class="buttoncool" id="up" onclick="document.getElementById('myTune').volume+=0.1">Volume Up</button>
-        <button class="buttoncool" id="speed" onclick="document.getElementById('myTune').currentTime+=30">Speed Up</button>
-        <button class="buttoncool" id="down" onclick="document.getElementById('myTune').volume-=0.1">Volume Down</button>
-        <button class="buttoncool" id="mute" onclick="document.getElementById('myTune').volume-=2">Mute</button>
-        <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=2">Unmute</button>
+        <button class="buttoncool" id="speed" onclick="document.getElementById('myTune').currentTime+=30">Speed Up
+        </button>
+        <button class="buttoncool" id="down" onclick="document.getElementById('myTune').volume-=0.1">Volume Down
+        </button>
+        <button class="buttoncool" id="mute" onclick="document.getElementById('myTune').volume-=1">Mute</button>
+        <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=1">Unmute</button>
     </div>
 
 </div>
