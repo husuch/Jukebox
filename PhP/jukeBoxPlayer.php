@@ -35,6 +35,7 @@
 
 
         <?php
+
         include_once("../Database/connection.php");
         $con = new mysqli("localhost", "root", "", "jukebox");
         $select = "Select * from music";

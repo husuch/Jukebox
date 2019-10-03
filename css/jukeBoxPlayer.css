@@ -5,10 +5,10 @@ body{
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    background-image: url("../background/wood.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center, center center;
-    background-attachment: fixed, fixed;
+    background-image: url("../background/background1.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
