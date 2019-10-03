@@ -6,7 +6,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <script src="https://kit.fontawesome.com/509accf0a1.js" crossorigin="anonymous"></script>
 
-    <link href="css/index.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/about.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
@@ -17,7 +18,7 @@
 
     <form action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
 
-        <input type="submit" formaction="index.php" value="Home" name="home">
+        <input type="submit" formaction="../index.php" value="Home" name="home">
         <input type="submit" value="Rock" name="style">
         <input type="submit" value="Pop" name="style">
         <input type="submit" value="Jazz" name="style">
@@ -33,21 +34,16 @@
 
     </form>
     <div class="titel">
-        <img id="logo" src="background/logoNoBackground.png" alt="logo">
+        <img id="logo" src="../background/logoNoBackground.png" alt="logo">
     <h1>Hit-Radio 68</h1>
-
     </div>
 
-    <div class="cover">
+    <div id="content">
 
-        <?php
-        $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
-        while ($file = readdir($handle)) {
-            if ($file !== '.' && $file !== '..') {
-                echo '<a href="PhP/jukeBoxPlayer.php"><img class = "img" src="img/' . $file . '" alt = "' . $file . '"/></a>';
-            }
-        }
-        ?>
+        <h2>Über uns</h2>
+        <p>Wir sind eine Radiozentrale, welche nicht wie alle die neuesten Lieder spielt,
+            sondern zurück in die klassische Zeiten geht. Unsere. Wir haben eine grosse Auswahl von Liedern von verschiedenen
+            Künstlern wie AC/DC bis zu Bob Marley. </p>
     </div>
 
     <div class="footer-basic-centered">
@@ -55,13 +51,13 @@
         <p class="company">Radio-68</p>
 
         <p class="footer-links">
-            <a href="index.php">Home</a>
+            <a href="../index.php">Home</a>
             ·
-            <a href="PhP/about.php">About</a>
+            <a href="about.php">About</a>
             ·
-            <a href="PhP/contact.php">Contact</a>
+            <a href="contact.php">Contact</a>
             ·
-            <a href="PhP/followus.php">Follow us</a>
+            <a href="followus.php">Follow us</a>
         </p>
 
         <p class="footer-company-name">Radio-68 &copy; 2019</p>
