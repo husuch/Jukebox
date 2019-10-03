@@ -38,34 +38,50 @@
         $result = mysqli_query($con, $select);
         $style = $_POST['style'];
         $loadSource = 0;
-        $i = 0;
         $source = array();
+        $i = 0;
+        while ($rows = mysqli_fetch_assoc($result)) {
+            if ($rows['Genre'] == $style) {
+
+                $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
+                $loadSource = $loadSource + 1;
+            } else {
+                echo "";
+            }
+        }
         ?>
-        <audio id="myTune" class="audio">
+        <audio id="myTune" class="audio" controls>
+            <source src="<?php echo $source[0] ?>">
+
+            <audio id="music" src="blah.mp3" onended="myFunction()"></audio>
+            myFunction(){
+            }
+
             <?php
-            while ($rows = mysqli_fetch_assoc($result)) {
-                if ($rows['Genre'] == $style) {
 
-                    $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
-                    $loadSource = $loadSource + 1;
+            while ($loadSource - 1 > $i) {
 
-                } else {
+                if (document.getElementById("myTune").currentTime == 90) {
+
+                    $i = $i + 1;
+                    ?>
+                    <source src="<?php echo $source[$i] ?>">
+                    <?php
+                }
+                else{
                     echo "";
                 }
             }
             ?>
-            <source src="<?php echo $source[0] ?>" type="audio/mp3"/>
-            <script type="text/javascript">
-                document.getElementById('myTune').addEventListener("ended",function() {
-                    <?php $i = $i+1 ?>
-                    this.src = "<?php echo $source[$i] ?>";
-                    this.play();
-                });
-            </script>
+
         </audio>
         <button onclick="document.getElementById('myTune').play()">Play</button>
         <button onclick="document.getElementById('myTune').pause()">Pause</button>
+        <button onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
+            Reset Music
+        </button>
         <button onclick="document.getElementById('myTune').volume+=0.1">Volume Up</button>
+        <button onclick="document.getElementById('myTune').currentTime+=30">Speed Up</button>
         <button onclick="document.getElementById('myTune').volume-=0.1">Volume Down</button>
 
     </div>
