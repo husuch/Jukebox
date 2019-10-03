@@ -30,10 +30,6 @@
 
     <div class="audio">
 
-
-
-
-
         <?php
 
         include_once("../Database/connection.php");
@@ -41,19 +37,36 @@
         $select = "Select * from music";
         $result = mysqli_query($con, $select);
         $style = $_POST['style'];
-        while ($rows = mysqli_fetch_assoc($result)) {
-            if ($rows['Genre'] == $style) {
-                ?>
-                <audio class="audio" controls="controls" ">
-                    <source src="../Mp3/<?php echo $rows['Mp3Path']?>" type="audio/mp3"/>
-                </audio>
-                <?php
-            } else {
-                echo "";
-            }
-        }
-        echo $style;
+        $loadSource = 0;
+        $i = 0;
+        $source = array();
         ?>
+        <audio id="myTune" class="audio">
+            <?php
+            while ($rows = mysqli_fetch_assoc($result)) {
+                if ($rows['Genre'] == $style) {
+
+                    $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
+                    $loadSource = $loadSource + 1;
+
+                } else {
+                    echo "";
+                }
+            }
+            ?>
+            <source src="<?php echo $source[0] ?>" type="audio/mp3"/>
+            <script type="text/javascript">
+                document.getElementById('myTune').addEventListener("ended",function() {
+                    <?php $i = $i+1 ?>
+                    this.src = "<?php echo $source[$i] ?>";
+                    this.play();
+                });
+            </script>
+        </audio>
+        <button onclick="document.getElementById('myTune').play()">Play</button>
+        <button onclick="document.getElementById('myTune').pause()">Pause</button>
+        <button onclick="document.getElementById('myTune').volume+=0.1">Volume Up</button>
+        <button onclick="document.getElementById('myTune').volume-=0.1">Volume Down</button>
 
     </div>
 </body>
