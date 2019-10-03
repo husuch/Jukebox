@@ -61,7 +61,7 @@ body {
 
     }
 
-    .img, input{
+    .img {
         margin: 8px;
         width: 12vw; /*23.45vw*/
         height: 12vw;
@@ -298,5 +298,4 @@ body {
     color: inherit;
     outline: none;
 }
-
 
