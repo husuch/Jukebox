@@ -18,10 +18,13 @@
         grid-column-end: 3;
         grid-row-start: 4;
         grid-row-end: 5;
-        font-family: "Arial Rounded MT Bold";
         justify-content: center;
     }
 
+    img{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
 }
 
 @media only screen and (min-width: 1055px) {
@@ -32,9 +35,12 @@
         grid-row-end: 4;
         height: 50%;
         width: 70%;
-        font-family: "Arial Rounded MT Bold";
+
     }
 
+}
+#content{
+    font-family: "Arial Rounded MT Bold";
 }
 
 #content h2{
