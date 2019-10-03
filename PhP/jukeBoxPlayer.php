@@ -27,53 +27,53 @@
 
 
     </form>
-
-    <div class="audio">
-
-        <?php
-
-        include_once("../Database/connection.php");
-        $con = new mysqli("localhost", "root", "", "jukebox");
-        $select = "Select * from music";
-        $result = mysqli_query($con, $select);
-        $style = $_POST['style'];
-        $loadSource = 0;
-        $source = array();
-        $i = 0;
-        while ($rows = mysqli_fetch_assoc($result)) {
-            if ($rows['Genre'] == $style) {
-
-                $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
-                $loadSource = $loadSource + 1;
-            } else {
-                echo "";
-            }
-        }
-        ?>
-        <audio id="myTune" class="audio" controls>
-            <source src="<?php echo $source[0] ?>">
-
-            <audio id="music" src="blah.mp3" onended="myFunction()"></audio>
-            myFunction(){
-            }
+        <table>
+            <tr>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Song</th>
+                <th>Genre</th>
+            </tr>
 
             <?php
 
-            while ($loadSource - 1 > $i) {
+            include_once("../Database/connection.php");
+            $con = new mysqli("localhost", "root", "", "jukebox");
+            $select = "Select * from music";
+            $result = mysqli_query($con, $select);
+            $style = $_POST['style'];
+            $loadSource = 0;
+            $i = 0;
+            $source = array();
+            while ($rows = mysqli_fetch_assoc($result)) {
+                if ($rows['Genre'] == $style) {
+                    $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
+                    $loadSource = $loadSource + 1;
 
-                if (document.getElementById("myTune").currentTime == 90) {
-
-                    $i = $i + 1;
                     ?>
-                    <source src="<?php echo $source[$i] ?>">
+                    <tr>
+                        <td><?php $rows['Artist'] ?></td>
+                        <td><?php $rows['Album'] ?></td>
+                        <td><?php $rows['Song'] ?></td>
+                        <td><?php $rows['Genre'] ?></td>
+                    </tr>
                     <?php
-                }
-                else{
+                } else {
                     echo "";
                 }
             }
             ?>
+        </table>
+        <audio id="myTune" class="audio">
 
+            <?php
+            while ($loadSource - 1 > $i) {
+                ?>
+                <source src="<?php echo $source[$i] ?>"/>
+                <?php
+                $i = $i + 1;
+            }
+            ?>
         </audio>
         <button onclick="document.getElementById('myTune').play()">Play</button>
         <button onclick="document.getElementById('myTune').pause()">Pause</button>
