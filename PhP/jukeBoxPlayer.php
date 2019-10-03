@@ -126,6 +126,7 @@
         ?>
     </div>
     <div class="knopf">
+        <img src="../background/OSOD.gif" id="Gif">
         <button class="buttoncool" id="play" onclick="document.getElementById('myTune').play()">Play</button>
         <button class="buttoncool" id="pause" onclick="document.getElementById('myTune').pause()">Pause</button>
         <button class="buttoncool" id="reset"
