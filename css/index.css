@@ -69,6 +69,7 @@ body {
         position: relative;
         object-fit: cover;
         border-radius: 5%;
+        outline: none;
     }
 
 
@@ -84,6 +85,7 @@ body {
         padding: 0;
         grid-template-columns: 1% Auto 1% ;
         grid-template-rows: 50px 250px Auto 225px;
+        outline: none;
     }
 
     .topNav {
@@ -125,6 +127,7 @@ body {
         position: relative;
         object-fit: cover;
         border-radius: 5%;
+        outline: none;
     }
     #logo{
         grid-column-start: 3;
@@ -142,6 +145,7 @@ body {
     font-family: "Arial Rounded MT Bold";
     font-size: 3vmax;
     margin-right: 30%;
+    outline: none;
 
 }
 #logo{
@@ -149,6 +153,7 @@ body {
     height: 70%;
     float: left;
     margin-right: 0%;
+    outline: none;
 
 }
 /* Add a black background color to the top navigation */
@@ -156,6 +161,7 @@ body {
     background-color: #333;
     overflow: hidden;
     padding: 0;
+    outline: none;
 }
 
 /* Style the links inside the navigation bar */
@@ -176,16 +182,18 @@ body {
     position: relative;
     float: left;
     margin-left: 10px;
+    outline: none;
 }
 
 
 ::placeholder {
     color: #f2f2f2;
+    outline: none;
 }
 
 
 #shuffle{
-
+    outline: none;
     padding: 10px 12px;
     font-size: 180%;
     border: none !important;
@@ -193,6 +201,7 @@ body {
 
 .topNav .search-container {
     float: right;
+    outline: none;
 
 }
 
@@ -200,12 +209,13 @@ body {
     padding: 6px;
     margin-top: 0px;
     font-size: 180%;
-
+    outline: none;
     color: #292c2f;
     background-color: white;
     border: none !important;
 }
 ::placeholder{
+    outline: none;
     color: #8d9093;
 }
 .topNav .search-container button {
@@ -217,10 +227,12 @@ body {
     font-size: 17px;
     border: none;
     cursor: pointer;
+    outline: none;
 }
 
 .topNav .search-container button:hover {
     background: deepskyblue;
+    outline: none;
 }
 
 
@@ -229,11 +241,13 @@ body {
     background-color: #ddd;
     color: black;
     transition: 200ms;
+    outline: none;
 }
 
 /* Add a color to the active/current link */
 .topNav input.active{
     color: white;
+    outline: none;
 }
 
 .footer-basic-centered {
@@ -244,7 +258,7 @@ body {
     margin: 0;
     text-align: center;
     font: normal 18px sans-serif;
-
+    outline: none;
     padding: 45px;
 }
 
@@ -252,18 +266,21 @@ body {
     color: lightgray;
     font-size: 20px;
     margin: 0;
+    outline: none;
 }
 
 .footer-basic-centered .company {
     color: #8d9093;
     font-size: 20px;
     margin: 0;
+    outline: none;
 }
 
 .footer-basic-centered .footer-company-name {
     color: #8f9296;
     font-size: 14px;
     margin: 0;
+    outline: none;
 }
 
 .footer-basic-centered .footer-links {
@@ -272,12 +289,14 @@ body {
     color: #ffffff;
     padding: 35px 0 23px;
     margin: 0;
+    outline: none;
 }
 
 .footer-basic-centered .footer-links a {
     display: inline-block;
     text-decoration: none;
     color: inherit;
+    outline: none;
 }
 
 

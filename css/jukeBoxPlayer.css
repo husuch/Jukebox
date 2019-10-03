@@ -46,10 +46,17 @@ body{
 
     }
     .audio{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 6;
+    }
+
+    .knopf{
         grid-column-start: 3;
         grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
 
 
@@ -104,6 +111,7 @@ body{
     background-color: #333;
     overflow: hidden;
     padding: 0;
+    outline: none;
 
 }
 
@@ -125,23 +133,27 @@ body{
     position: relative;
     float: left;
     margin-left: 10px;
+    outline: none;
 
 }
 
 
 ::placeholder {
     color: #f2f2f2;
+    outline: none;
 }
 #shuffle{
 
     padding: 10px 12px;
     font-size: 180%;
     border: none !important;
+    outline: none;
 
 }
 
 .topNav .search-container {
     float: right;
+    outline: none;
 
 }
 
@@ -153,9 +165,11 @@ body{
     color: #292c2f;
     background-color: white;
     border: none !important;
+    outline: none;
 }
 ::placeholder{
     color: #8d9093;
+    outline: none;
 }
 .topNav .search-container button {
     float: right;
@@ -166,10 +180,12 @@ body{
     font-size: 17px;
     border: none;
     cursor: pointer;
+    outline: none;
 }
 
 .topNav .search-container button:hover {
     background: deepskyblue;
+    outline: none;
 }
 
 
@@ -178,11 +194,13 @@ body{
     background-color: #ddd;
     color: black;
     transition: 200ms;
+    outline: none;
 }
 
 /* Add a color to the active/current link */
 .topNav input.active{
     color: white;
+    outline: none;
 }
 
 #next-songs ul{
@@ -211,9 +229,11 @@ table {
     border-style: solid;
     border-width:  3px;
     font-size: 180%;
+    outline: none;
 }
 
 th, td {
+    outline: none;
     border-color: white;
     border-style: double;
     border-width:  3px;
