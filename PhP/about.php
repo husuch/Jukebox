@@ -9,13 +9,13 @@
     <link href="../css/index.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>About</title>
 </head>
 <body>
 
 <div class="grid-box">
 
-    <form action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
+    <form action="jukeBoxPlayer.php" class="topNav" method="POST">
 
         <input type="submit" formaction="../index.php" value="Home" name="home">
         <input type="submit" value="Rock" name="style">
@@ -32,9 +32,11 @@
         </div>
 
     </form>
+
+
     <div class="titel">
         <img id="logo" src="../background/logoNoBackground.png" alt="logo">
-    <h1>Hit-Radio 68</h1>
+        <h1>Hit-Radio 68</h1>
     </div>
 
     <div id="content">
