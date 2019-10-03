@@ -26,15 +26,22 @@
         </div>
     </form>
 
+    <div class="playlistliste">
+       <table>
+           <th id="player">
+              Playlist
+           </th>
+       </table>
+
+    </div>
+
     <div class="audio">
 
         <table>
             <tr>
-                <th colspan="4">Playlist</th>
-            </tr>
-            <tr>
                 <th>Artist</th>
                 <th>Album</th>
+                <td id="mitte" width="400px"></td>
                 <th>Song</th>
                 <th>Genre</th>
             </tr>
@@ -77,6 +84,7 @@
                         <tr>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>" name="band"></td>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?> " name="search"></td>
+                            <td id="inhalte"></td>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?> " name="search"></td>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?> " name="style"></td>
                         </tr>

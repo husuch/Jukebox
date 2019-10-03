@@ -70,8 +70,8 @@ body{
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: 10px 500px Auto 500px 10px;
-        grid-template-rows: 50px 450px Auto 225px;
+        grid-template-columns: 30px 30px 500px Auto 500px 10px;
+        grid-template-rows: 50px 5% 450px Auto 225px;
     }
 
     .topNav {
@@ -84,9 +84,9 @@ body{
 
     .audio{
         grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 5;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 6;
     }
     .sound{
         grid-column-start: 3;
@@ -98,6 +98,12 @@ body{
     .knopf{
         grid-column-start: 3;
         grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .playlistliste{
+        grid-column-start: 2;
+        grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3;
     }
@@ -224,7 +230,6 @@ body{
 
 table{
     margin-left: 0;
-    width: 30vw;
     border-color: white;
     border-style: solid;
     border-width:  3px;
@@ -239,7 +244,25 @@ th, td {
     border-width:  3px;
     color: #14ac5f;
 }
+#mitte{
+    outline: none;
+    border: none;
+    color: #14ac5f;
+}
+#inhalte{
+    outline: none;
+    border: none;
+    color: #14ac5f;
+}
+#player{
+
+    padding: 0px 680px;
+    position: center;
+}
+
+
 th{
+  padding: 0px 100px;
     font-size: 120%;
     font-weight: bold;
 }
