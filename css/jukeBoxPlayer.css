@@ -190,3 +190,37 @@ body{
 #next-songs ul li:nth-child(even) {
     background-color: cornflowerblue;
 }
+#img,#omg,#cd{
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.button1{
+
+    background: transparent;
+    border: transparent;
+    height: 0px;
+    width: 0px;
+    border: none;
+    /*outline: none;*/
+}
+
+#buttonimage1{
+    height: 100px;
+    width: 200px;
+}
+#buttonimage2{
+
+    height: 50px;
+    width: 100px;
+}
+#buttonimage3{
+
+    height: 150px;
+    width: 175px;
+}
