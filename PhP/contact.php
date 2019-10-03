@@ -53,13 +53,13 @@
         <p class="company">Radio-68</p>
 
         <p class="footer-links">
-            <a href="index.php">Home</a>
+            <a href="../index.php">Home</a>
             ·
-            <a href="PhP/about.php">About</a>
+            <a href="about.php">About</a>
             ·
-            <a href="PhP/contact.php">Contact</a>
+            <a href="contact.php">Contact</a>
             ·
-            <a href="PhP/followus.php">Follow us</a>
+            <a href="followus.php">Follow us</a>
         </p>
 
         <p class="footer-company-name">Radio-68 &copy; 2019</p>
