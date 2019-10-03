@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    background-image: url("../background/jukeboxnobackground.png"), url("../background/wood.jpg");
+    background-image: url("../img/ABBA_AbbaLive.jpg"), url("../background/wood.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-attachment: fixed, fixed;

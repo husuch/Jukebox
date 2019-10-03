@@ -91,13 +91,12 @@ body {
         grid-row-start: 1;
         grid-row-end: 2;
 
-    }
-    .titel{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
+    } .titel{
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3;
+      }
 
 
     .footer-basic-centered {
@@ -134,6 +133,7 @@ body {
     color: cornflowerblue;
     font-family: "Arial Black";
     font-size: 2vmax;
+    margin-left: 25%;
 }
 
 
