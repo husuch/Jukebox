@@ -25,29 +25,31 @@
         <input type="submit" value="Reggae" name="style">
         <input id="shuffle" type="submit" value="Shuffle" name="style" style="background-color: green">
         <div class="search-container">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
+            <input type="text" placeholder="Search..." name="style" value="">
+            <button type="submit"><i class="fa fa-search"></i></button>
 
+        </div>
     </form>
+
+
     <div class="titel">
         <img id="logo" src="background/logoNoBackground.png" alt="logo">
-    <h1>Hit-Radio 68</h1>
+        <h1>Hit-Radio 68</h1>
 
     </div>
 
     <div class="cover">
-
-        <?php
-        $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
-        while ($file = readdir($handle)) {
-            if ($file !== '.' && $file !== '..') {
-                echo '<a href="PhP/jukeBoxPlayer.php"><img class = "img" src="img/' . $file . '" alt = "' . $file . '"/></a>';
+        <form action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
+            <?php
+            $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
+            while ($file = readdir($handle)) {
+                if ($file !== '.' && $file !== '..') {
+                    $name = explode("_", $file);
+                    echo '<input type="image" value=' . $name[0] . ' name="style" class = "img" src="img/' . $file . '">';
+                }
             }
-        }
-        ?>
+            ?>
+        </form>
     </div>
 
     <div class="footer-basic-centered">

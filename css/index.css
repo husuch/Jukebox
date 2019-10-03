@@ -60,7 +60,7 @@ body {
 
     }
 
-    .img {
+    .img, input{
         margin: 8px;
         width: 15vw; /*23.45vw*/
         height: 15vw;
@@ -278,4 +278,5 @@ body {
     text-decoration: none;
     color: inherit;
 }
+
 

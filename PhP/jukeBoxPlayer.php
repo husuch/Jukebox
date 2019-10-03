@@ -19,10 +19,8 @@
         <input type="submit" value="Reggae" name="style">
         <input id="shuffle" type="submit" value="Shuffle" name="style" style="background-color: green">
         <div class="search-container">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
+                <input type="text" placeholder="Search..." name="search" value="placeholder">
                 <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
         </div>
 
 
@@ -44,12 +42,12 @@
             $con = new mysqli("localhost", "root", "", "jukebox");
             $select = "Select * from music";
             $result = mysqli_query($con, $select);
-            $style = $_POST['style'];
+            $yourSelect = $_POST['style'];
             $loadSource = 0;
             $source = array();
             $i = 0;
             while ($rows = mysqli_fetch_assoc($result)) {
-                if ($rows['Genre'] == $style ) {
+                if ($rows['Artist'] == $yourSelect  or  $rows['Album'] == $yourSelect or  $rows['Song'] or  $rows['Genre']==$yourSelect) {
 
                     $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                     $loadSource = $loadSource + 1;
@@ -102,8 +100,8 @@
         <button onclick="document.getElementById('myTune').volume+=0.1">Volume Up</button>
         <button onclick="document.getElementById('myTune').currentTime+=30">Speed Up</button>
         <button onclick="document.getElementById('myTune').volume-=0.1">Volume Down</button>
-        <button onclick="document.getElementById('myTune').volume-=2">Mute</button>
-        <button onclick="document.getElementById('myTune').volume+=2">Unmute</button>
+        <button onclick="document.getElementById('myTune').volume-=1">Mute</button>
+        <button onclick="document.getElementById('myTune').volume+=1">Unmute</button>
     </div>
 
 </div>
