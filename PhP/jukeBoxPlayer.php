@@ -57,7 +57,7 @@
                 </audio>
                 <?php
             } else {
-                echo "nei";
+                echo "";
             }
         }
         echo $style;
