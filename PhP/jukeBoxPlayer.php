@@ -19,13 +19,11 @@
         <input type="submit" value="Reggae" name="style">
         <input id="shuffle" type="submit" value="Shuffle" name="style" style="background-color: green">
         <div class="search-container">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+            <form action="jukeBoxPlayer.php" method="post">
+                <input type="text" placeholder="Search..." name="style">
+                <button type="submit" formaction="php/jukeBoxPlayer.php"><i class="fa fa-search"></i></button>
             </form>
         </div>
-
-
     </form>
 
     <div class="audio">
@@ -44,12 +42,12 @@
             $con = new mysqli("localhost", "root", "", "jukebox");
             $select = "Select * from music";
             $result = mysqli_query($con, $select);
-            $style = $_POST['style'];
+            $input = $_POST['style'];
             $loadSource = 0;
             $source = array();
             $i = 0;
             while ($rows = mysqli_fetch_assoc($result)) {
-                if ($rows['Genre'] == $style ) {
+                if (($rows['Genre'] == $input) or ($rows['Artist']== $input) or ($rows['Album'] == $input) or ($rows['Song'] == $input)) {
 
                     $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                     $loadSource = $loadSource + 1;
@@ -69,7 +67,7 @@
         </table>
     </div>
     <div class="sound">
-        <audio id="myTune" class="audio" controls>
+        <audio id="myTune" class="audio">
             <source src="<?php echo $source[0] ?>">
         </audio>
         <script type="text/javascript">
@@ -86,7 +84,7 @@
         function nextSong($source)
         {
             ?>
-            <audio id="myTune" class="audio" controls>
+            <audio id="myTune" class="audio">
                 <source src="<?php echo $source ?>">
             </audio>
             <?php

@@ -25,8 +25,10 @@
         <input type="submit" value="Reggae" name="style">
         <input id="shuffle" type="submit" value="Shuffle" name="style" style="background-color: green">
         <div class="search-container">
-            <input type="text" placeholder="Search..." name="style" value="">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <form action="php/jukeBoxPlayer.php" method="post">
+                <input type="text" placeholder="Search..." name="style">
+                <button type="submit" formaction="php/jukeBoxPlayer.php"><i class="fa fa-search"></i></button>
+            </form>
 
         </div>
     </form>
@@ -39,13 +41,13 @@
     </div>
 
     <div class="cover">
-        <form action="PhP/jukeBoxPlayer.php" class="topNav" method="POST">
+        <form action="PhP/jukeBoxPlayer.php" method="POST">
             <?php
             $handle = opendir(dirname(realpath(__FILE__)) . '/img/');
             while ($file = readdir($handle)) {
                 if ($file !== '.' && $file !== '..') {
                     $name = explode("_", $file);
-                    echo '<input type="image" value=' . $name[0] . ' name="style" class = "img" src="img/' . $file . '">';
+                    echo '<input type="image" value='.$name[0].' class = "img" src="img/' . $file . '" name="style">';
                 }
             }
             ?>
