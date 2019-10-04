@@ -215,7 +215,7 @@
             onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
         <i class="fas fa-undo-alt"></i>
     </button>
-    <button class="buttoncool" id="up" onclick="document.getElementById('myTune').volume+=0.1"><i class="fas fa-plus">
+    <button class="buttoncool" id="up" onclick="document.getElementById('myTune').volume+=0.1"><i class="fas fa-plus"></i>
     </button>
     <button class="buttoncool" id="speed" onclick="document.getElementById('myTune').currentTime+=30"><i
                 class="fas fa-forward"></i>
