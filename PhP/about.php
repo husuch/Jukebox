@@ -12,6 +12,7 @@
     <title>About</title>
 </head>
 <body>
+
 //Grid-Box (Zweck: zur Platzierung verschiedener Elemente)
 <div class="grid-box">
     //Navigation Bar
@@ -33,7 +34,7 @@
 
     </form>
 
-    //Titel (Bild+Titel)
+    //Titel
     <div class="titel">
         <img id="logo" src="../background/logoNoBackground.png" alt="logo">
         <h1>Hit-Radio 68</h1>

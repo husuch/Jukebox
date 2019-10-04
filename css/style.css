@@ -42,15 +42,19 @@
     }
 
 }
+
+/*Schriftart für alle Elemente im #content*/
 #content{
     font-family: "Arial Rounded MT Bold";
 }
 
+/*h2 Decorationen im #content*/
 #content h2{
     color: cornflowerblue;
     font-size: 2.75vmax;
 }
 
+/*p Decorationen im #content*/
 #content p{
     color: cornflowerblue;
     font-size: 1.75vmax;
