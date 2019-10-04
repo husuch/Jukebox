@@ -115,7 +115,9 @@
                     }
                 }
             } else if (isset($shuffle)) {
+                $playlist = array();
                 while ($rows = mysqli_fetch_assoc($result)) {
+
                     $rand = rand(3, 8);
                     if ($rows['ID'] % $rand > 2) {
                         $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
