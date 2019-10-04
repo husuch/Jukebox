@@ -269,8 +269,8 @@ th, td {
 
 
 th{
- text-decoration: underline overline;
-  padding: 0px 75px;
+    text-decoration: underline overline;
+    padding: 0px 75px;
     font-size: 190%;
     font-weight: bold;
     color: white;
@@ -345,4 +345,3 @@ td{
 
 
 }
-
