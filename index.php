@@ -41,27 +41,30 @@
     </div>
 
     <div class="cover">
-        <form action="PhP/jukeBoxPlayer.php" method="POST">
-            <?php
 
-            $con = new mysqli("localhost", "root", "", "jukebox");
-            $select = "Select * from music";
-            $result = mysqli_query($con, $select);
-            $alreadyIn = "";
+        <?php
 
-            while ($rows = mysqli_fetch_assoc($result)) {
-                if (strpos($alreadyIn, $rows['ImagePath']) === FALSE) {
-                        $alreadyIn = $alreadyIn.$rows['ImagePath'];
-                    ?>
-                    <input type="image" value="<?php echo $rows['Artist'] ?>" class="img"
-                           src="<?php echo $rows['ImagePath'] ?>" name="band" alter="<?php echo $rows['Album'];?>">
-                    <?php
-                } else {
-                    echo "";
-                }
+        $con = new mysqli("localhost", "root", "", "jukebox");
+        $select = "Select * from music";
+        $result = mysqli_query($con, $select);
+        $alreadyIn = "";
+
+        while ($rows = mysqli_fetch_assoc($result)) {
+            if (strpos($alreadyIn, $rows['ImagePath']) === FALSE) {
+                $alreadyIn = $alreadyIn . $rows['ImagePath'];
+                ?>
+                <form action="PhP/jukeBoxPlayer.php" method="POST">
+                    <input type="image" value="<?php echo $rows['Album']?>" class="img"
+                           src="<?php echo $rows['ImagePath'] ?>" name="album"
+                           alter="<?php echo $rows['Album']; ?>">
+                </form>
+                <?php
+            } else {
+                echo "";
             }
-            ?>
-        </form>
+        }
+        ?>
+
     </div>
 
     <div class="footer-basic-centered">

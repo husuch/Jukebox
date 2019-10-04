@@ -55,6 +55,7 @@
 
             $songInput = "";
             $albumInput = "";
+            $albumCover ="";
 
             $searchInput = "";
             $artistInput = "";
