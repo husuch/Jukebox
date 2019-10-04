@@ -177,12 +177,12 @@
                 onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
             <i class="fas fa-undo-alt"></i>
         </button>
-        <button class="buttoncool" id="up" onclick="document.getElementById('myTune').volume+=0.1">Volume Up</button>
+        <button class="buttoncool" id="up" onclick="document.getElementById('myTune').volume+=0.1"><i class="fas fa-plus"></button>
         <button class="buttoncool" id="speed" onclick="document.getElementById('myTune').currentTime+=30"><i class="fas fa-forward"></i>
 
 
         </button>
-        <button class="buttoncool" id="down" onclick="document.getElementById('myTune').volume-=0.1"><i class="fas fa-volume-down"></i>
+        <button class="buttoncool" id="down" onclick="document.getElementById('myTune').volume-=0.1"><i class="fas fa-minus"></i>
         </button>
         <button class="buttoncool" id="mute" onclick="document.getElementById('myTune').volume-=1"><i class="fas fa-volume-mute"></i></button>
         <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=1"><i class="fas fa-volume-up"></i></button>

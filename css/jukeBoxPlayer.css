@@ -292,56 +292,57 @@ td{
 
 .buttoncool{
     height: 40px;
-    width: 70px;
-    border-radius: 28px;
+    width: 40px;
+    border-radius: 70%;
     float: left;
     outline: none;
     background-color: goldenrod;
-    border-color: goldenrod;
+    border-color: black;
 
 }
 #play{
 
     margin-top: 150px;
-    margin-left: 110px;
+    margin-left: 142px;
     position: fixed;
 }
 #pause{
     margin-top: 150px;
-    margin-left: 220px;
+    margin-left: 215px;
     position: fixed;
 }
 #reset{
     margin-top: 150px;
-    margin-left: 12px;
+    margin-left: 100px;
+    position: fixed;
+}
+#speed{
+    margin-top: 150px;
+    margin-left: 250px;
     position: fixed;
 }
 #up{
-    margin-left: 50px;
+    margin-left: 100px;
     position: fixed;
     margin-top: 210px;
 
 }
 #down{
-    margin-left: 300px;
+    margin-left: 260px;
     position: fixed;
-    margin-top: 210px;
+    margin-top: 210px
 }
 #mute{
     margin-top: 210px;
-    margin-left: 130px;
+    margin-left: 140px;
     position: fixed;
 }
 #unmute{
     margin-top: 210px;
-    margin-left: 220px;
+    margin-left: 210px;
     position: fixed;
 
 
 
 }
-#speed{
-    margin-top: 150px;
-    margin-left: 318px;
-    position: fixed;
-}
+
