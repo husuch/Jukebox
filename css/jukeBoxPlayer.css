@@ -248,41 +248,46 @@ th, td {
     border-style: groove;
     border-width:  3px;
     */
-    color: #14ac5f;
+    color: white;
 }
 #mitte{
     outline: none;
     border: none;
-    color: #14ac5f;
+    color: white;
 }
 #inhalte{
     outline: none;
     border: none;
-    color: #14ac5f;
+    color: white;
 }
 #player{
-    color: black;
-    font-size: 50px;
-
+    text-decoration: none;
+    color: white;
+    text-shadow: black;
+    font-size: 400%;
 }
 
 
 th{
-  padding: 0px 100px;
-    font-size: 120%;
+ text-decoration: underline overline;
+  padding: 0px 75px;
+    font-size: 190%;
     font-weight: bold;
+    color: white;
+
 }
 td{
     font-size: 100%;
     font-weight: lighter;
     text-align:center;
+    color:white;
 }
 .tableForm{
     border: transparent;
     background: transparent;
     font-size: 100%;
     font-weight: bold;
-    color: #14ac5f;
+    color: white;
 }
 
 .buttoncool{
