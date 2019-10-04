@@ -8,6 +8,7 @@
     <title>Jukebox</title>
 </head>
 <body>
+<div id="bg">
 <div class="grid-box">
     <form action="jukeBoxPlayer.php" class="topNav" method="POST">
 
@@ -17,6 +18,23 @@
         <input type="submit" value="Jazz" name="style">
         <input type="submit" value="Disco" name="style">
         <input type="submit" value="Reggae" name="style">
+        <input type="button" onclick="formHilite" value="60's">
+        <script language="JavaScript" type="text/javascript">
+            function formHilite(ID,event)
+            {
+                if(document.getElementById)
+                {
+                    if (event=="focus")
+                    {
+                        document.getElementById(ID).style.setAttribute("backgroundImage","url(../background/background1.png)",true);
+                        return true;}
+                    else
+                    {
+                        document.getElementById(ID).style.setAttribute("backgroundImage","url(../background/background3.png)",true);
+                        return true;}
+                }
+            }
+            </script>
         <input id="shuffle" type="submit" value="shuffle" name="shuffle" style="background-color: green">
         <div class="search-container">
             <form action="jukeBoxPlayer.php" method="post">
@@ -41,10 +59,9 @@
         <tr>
             <th>Artist</th>
             <th>Album</th>
-            <td id="mitte" width="494px"></td>
+            <td id="mitte" width="500px"></td>
             <th>Song</th>
             <th>Genre</th>
-            <th>Anz.</th>
         </tr>
 
         <?php
@@ -124,10 +141,9 @@
                                        name="search"></td>
                             <td id="inhalte"></td>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
-                                       name="search"></td>
+                                       name="search"><?php echo $rows['callup'];?></td>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
                                        name="search"></td>
-                            <td><?php echo $rows['callup'];?></td>
                         </tr>
                     </form>
                     <?php
@@ -230,6 +246,7 @@
                 class="fas fa-volume-mute"></i></button>
     <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=1"><i
                 class="fas fa-volume-up"></i></button>
+</div>
 </div>
 </div>
 </body>
