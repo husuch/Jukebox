@@ -56,7 +56,7 @@
                 ?>
                 <form action="PhP/jukeBoxPlayer.php" method="POST">
 
-                    <input id = "album" type="submit" value="<?php echo $rows['Album'] ?>" class="img" name="album" alter="<?php echo $rows['Album']; ?>" style="font-size: 0; background-image: url('<?php echo $path ?>')">
+                    <input id = "album" type="submit"  value="<?php echo $rows['Album'] ?>" class="img" name="album" alter="<?php echo $rows['Album']; ?>" style="font-size: 0; background-image: url('<?php echo $path ?>')">
                 </form>
                 <?php
             } else {

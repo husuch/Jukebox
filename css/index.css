@@ -70,6 +70,7 @@ body {
         object-fit: cover;
         border-radius: 5%;
         outline: none;
+
     }
 
 }
@@ -298,5 +299,15 @@ body {
     text-decoration: none;
     color: inherit;
     outline: none;
+}
+#album{
+    border-color: transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    outline: none;
+
+
 }
 
