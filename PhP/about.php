@@ -12,9 +12,9 @@
     <title>About</title>
 </head>
 <body>
-
+//Grid-Box (Zweck: zur Platzierung verschiedener Elemente)
 <div class="grid-box">
-
+    //Navigation Bar
     <form action="jukeBoxPlayer.php" class="topNav" method="POST">
 
         <input type="submit" formaction="../index.php" value="Home" name="home">
@@ -33,12 +33,13 @@
 
     </form>
 
-
+    //Titel (Bild+Titel)
     <div class="titel">
         <img id="logo" src="../background/logoNoBackground.png" alt="logo">
         <h1>Hit-Radio 68</h1>
     </div>
 
+    //Der Inhalt der Seite
     <div id="content">
 
         <h2>Über uns</h2>
@@ -47,6 +48,7 @@
             Künstlern wie AC/DC bis zu Bob Marley. </p>
     </div>
 
+    //Footer
     <div class="footer-basic-centered">
         <p class="footer-company-motto">"Musik bedeutet nicht nur zu hören. Musik kann man fühlen"</p>
         <p class="company">Radio-68</p>
