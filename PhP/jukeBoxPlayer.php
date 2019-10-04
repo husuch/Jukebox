@@ -44,6 +44,7 @@
             <td id="mitte" width="494px"></td>
             <th>Song</th>
             <th>Genre</th>
+            <th>Anz.</th>
         </tr>
 
         <?php
@@ -57,7 +58,6 @@
 
         $songInput = "";
         $albumInput = "";
-        $albumCover = "";
 
         $searchInput = "";
         $artistInput = "";
@@ -98,6 +98,23 @@
 
                     $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                     $loadSource = $loadSource + 1;
+                    $getCallUp = 0;
+                    $getIdof = 0;
+
+                    $getCallUp = $rows['callup'];
+                    $getCallUp = $getCallUp+1;
+
+                    $getIdof = $rows['ID'];
+                    $getIdof = $getIdof +1;
+
+                    $sql = "UPDATE Music SET callup ='$getCallUp' WHERE id='$getIdof'";
+
+                    if ($con->query($sql) === TRUE) {
+                        echo "";
+                    } else {
+                        echo "Error updating record: " . $con->error;
+                    }
+
                     ?>
                     <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
                         <tr>
@@ -110,6 +127,7 @@
                                        name="search"></td>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
                                        name="search"></td>
+                            <td><?php echo $rows['callup'];?></td>
                         </tr>
                     </form>
                     <?php
@@ -122,6 +140,20 @@
 
                 $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                 $loadSource = $loadSource + 1;
+
+                $getCallUp = $rows['callup'];
+                $getCallUp = $getCallUp+1;
+
+                $getIdof = $rows['ID'];
+                $getIdof = $getIdof +1;
+
+                $sql = "UPDATE Music SET callup ='$getCallUp' WHERE id='$getIdof'";
+
+                if ($con->query($sql) === TRUE) {
+                    echo "";
+                } else {
+                    echo "Error updating record: " . $con->error;
+                }
 
                 ?>
                 <form action="jukeBoxPlayer.php" method="POST" class="tableForm">

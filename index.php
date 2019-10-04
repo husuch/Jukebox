@@ -54,7 +54,8 @@
                 $alreadyIn = $alreadyIn . $rows['ImagePath'];
                 ?>
                 <form action="PhP/jukeBoxPlayer.php" method="POST">
-                    <input type="image" value="<?php echo $rows['Album']?>" class="img"
+
+                    <input type="image" value="<?php echo $rows['Album'] ?>" class="img"
                            src="<?php echo $rows['ImagePath'] ?>" name="album"
                            alter="<?php echo $rows['Album']; ?>">
                 </form>
