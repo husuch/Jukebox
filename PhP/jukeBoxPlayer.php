@@ -123,24 +123,24 @@
                 $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                 $loadSource = $loadSource + 1;
 
-            ?>
-            <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
-                <tr>
-                <tr>
-                    <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>"
-                               name="search"></td>
-                    <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?>"
-                               name="search"></td>
-                    <td id="inhalte"></td>
-                    <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
-                               name="search"></td>
-                    <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
-                               name="search"></td>
-                </tr>
-                </tr>
-            </form>
+                ?>
+                <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
+                    <tr>
+                    <tr>
+                        <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>"
+                                   name="search"></td>
+                        <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?>"
+                                   name="search"></td>
+                        <td id="inhalte"></td>
+                        <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
+                                   name="search"></td>
+                        <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
+                                   name="search"></td>
+                    </tr>
+                    </tr>
+                </form>
 
-            <?php
+                <?php
             }
 
         }
