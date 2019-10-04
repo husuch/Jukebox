@@ -34,8 +34,8 @@
         </table>
 
     </div>
+    <div class="audio">
 
-    < class="audio">
 
     <table id="playlist">
         <tr>
@@ -206,7 +206,6 @@
     <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=1"><i
                 class="fas fa-volume-up"></i></button>
 </div>
-
 </div>
 </body>
 </html>
