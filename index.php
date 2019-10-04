@@ -52,12 +52,11 @@
         while ($rows = mysqli_fetch_assoc($result)) {
             if (strpos($alreadyIn, $rows['ImagePath']) === FALSE) {
                 $alreadyIn = $alreadyIn . $rows['ImagePath'];
+                $path = $rows['ImagePath'];
                 ?>
                 <form action="PhP/jukeBoxPlayer.php" method="POST">
 
-                    <input type="image" value="<?php echo $rows['Album'] ?>" class="img"
-                           src="<?php echo $rows['ImagePath'] ?>" name="album"
-                           alter="<?php echo $rows['Album']; ?>">
+                    <input id = "album" type="submit" value="<?php echo $rows['Album'] ?>" class="img" name="album" alter="<?php echo $rows['Album']; ?>" style="background-image: url('<?php echo $path ?>')">
                 </form>
                 <?php
             } else {
