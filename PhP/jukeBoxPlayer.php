@@ -35,161 +35,177 @@
 
     </div>
 
-    <div class="audio">
+    < class="audio">
 
-        <table>
-            <tr>
-                <th>Artist</th>
-                <th>Album</th>
-                <td id="mitte" width="494px"></td>
-                <th>Song</th>
-                <th>Genre</th>
-            </tr>
+    <table id="playlist">
+        <tr>
+            <th>Artist</th>
+            <th>Album</th>
+            <td id="mitte" width="494px"></td>
+            <th>Song</th>
+            <th>Genre</th>
+        </tr>
 
-            <?php
-
-            include_once("../Database/connection.php");
-            $con = new mysqli("localhost", "root", "", "jukebox");
-            $select = "Select * from music";
-            $result = mysqli_query($con, $select);
-
-            $songInput = "";
-            $albumInput = "";
-            $albumCover ="";
-
-            $searchInput = "";
-            $artistInput = "";
-            $styleInput = "";
-            $shuffle = "";
-            $shuffleBool = false;
-
-
-            IF (isset($_POST['style'])) {
-                $styleInput = $_POST['style'];
-            }
-            IF (isset($_POST['song'])) {
-                $songInput = $_POST['song'];
-            }
-            IF (isset($_POST['album'])) {
-                $albumInput = $_POST['album'];
-            }
-            IF (isset($_POST['band'])) {
-                $artistInput = $_POST['band'];
-            }
-            IF (isset($_POST['search'])) {
-                $searchInput = $_POST['search'];
-            }
-            IF (isset($_POST['shuffle'])) {
-                $shuffleBool = true;
-                $shuffle = $_POST['shuffle'];
-            }
-            $loadSource = 0;
-            $source = array();
-            $i = 0;
-            ?>
-
-            <?php
-
-            if ($shuffleBool!= true) {
-                while ($rows = mysqli_fetch_assoc($result)) {
-                    if (strcasecmp($rows['Genre'], $styleInput) == 0 or strcasecmp($rows['Genre'], $searchInput) == 0 or strcasecmp($rows['Artist'], $artistInput) == 0 or strcasecmp($rows['Artist'], $searchInput) == 0 or strcasecmp($rows['Album'], $albumInput) == 0  or strcasecmp($rows['Album'], $searchInput) == 0 or strcasecmp($rows['Song'], $songInput) == 0  or strcasecmp($rows['Song'], $searchInput) == 0) {
-
-                        $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
-                        $loadSource = $loadSource + 1;
-                        ?>
-                        <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
-                            <tr>
-                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>"
-                                           name="search"></td>
-                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?>"
-                                           name="search"></td>
-                                <td id="inhalte"></td>
-                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
-                                           name="search"></td>
-                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
-                                           name="search"></td>
-                            </tr>
-                        </form>
-                        <?php
-                    } else {
-                        echo "";
-                    }
-                }
-            } else if (isset($shuffle)) {
-                $playlist = array();
-                while ($rows = mysqli_fetch_assoc($result)) {
-
-                    $rand = rand(3, 8);
-                    if ($rows['ID'] % $rand > 2) {
-                        $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
-                        $loadSource = $loadSource + 1;
-                        ?>
-                        <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
-                            <tr>
-                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>"
-                                           name="band"></td>
-                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?> "
-                                           name="search"></td>
-                                <td id="inhalte"></td>
-                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?> "
-                                           name="search"></td>
-                                <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?> "
-                                           name="style"></td>
-                            </tr>
-                        </form>
-
-                        <?php
-                    }
-                }
-            }
-            ?>
-
-        </table>
-    </div>
-    <div class="sound">
-        <audio id="myTune" class="audio">
-            <source src="<?php echo $source[0] ?>">
-        </audio>
-        <script type="text/javascript">
-            document.getElementById('myTune').addEventListener("ended", function () {
-                <?php
-                $i = $i + 1;
-                nextSong($source[$i]);
-                ?>
-            });
-
-        </script>
         <?php
 
-        function nextSong($source)
-        {
-            ?>
-            <audio id="myTune" class="audio">
-                <source src="<?php echo $source ?>">
-            </audio>
-            <?php
+        include_once("../Database/connection.php");
+        $con = new mysqli("localhost", "root", "", "jukebox");
+        $select = "Select * from music ";
+        $result = mysqli_query($con, $select);
+
+        $songInput = "";
+        $albumInput = "";
+        $albumCover = "";
+
+        $searchInput = "";
+        $artistInput = "";
+        $styleInput = "";
+        $shuffle = "";
+        $shuffleBool = false;
+
+
+        IF (isset($_POST['style'])) {
+            $styleInput = $_POST['style'];
         }
-
+        IF (isset($_POST['song'])) {
+            $songInput = $_POST['song'];
+        }
+        IF (isset($_POST['album'])) {
+            $albumInput = $_POST['album'];
+        }
+        IF (isset($_POST['band'])) {
+            $artistInput = $_POST['band'];
+        }
+        IF (isset($_POST['search'])) {
+            $searchInput = $_POST['search'];
+        }
+        IF (isset($_POST['shuffle'])) {
+            $shuffleBool = true;
+            $shuffle = $_POST['shuffle'];
+        }
+        $loadSource = 0;
+        $source = array();
+        $i = 0;
         ?>
-    </div>
-    <div class="knopf">
 
-        <button class="buttoncool" id="play" onclick="document.getElementById('myTune').play()"><i class="fas fa-play"></i></button>
-        <button class="buttoncool" id="pause" onclick="document.getElementById('myTune').pause()"><i class="fas fa-pause"></i></button>
-        <button class="buttoncool" id="reset"
-                onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
-            <i class="fas fa-undo-alt"></i>
-        </button>
-        <button class="buttoncool" id="up" onclick="document.getElementById('myTune').volume+=0.1"><i class="fas fa-plus"></button>
-        <button class="buttoncool" id="speed" onclick="document.getElementById('myTune').currentTime+=30"><i class="fas fa-forward"></i>
+        <?php
+
+        if ($shuffleBool != true) {
+            while ($rows = mysqli_fetch_assoc($result)) {
+                if (strcasecmp($rows['Genre'], $styleInput) == 0 or strcasecmp($rows['Genre'], $searchInput) == 0 or strcasecmp($rows['Artist'], $artistInput) == 0 or strcasecmp($rows['Artist'], $searchInput) == 0 or strcasecmp($rows['Album'], $albumInput) == 0 or strcasecmp($rows['Album'], $searchInput) == 0 or strcasecmp($rows['Song'], $songInput) == 0 or strcasecmp($rows['Song'], $searchInput) == 0) {
+
+                    $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
+                    $loadSource = $loadSource + 1;
+                    ?>
+                    <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
+                        <tr>
+                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>"
+                                       name="search"></td>
+                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?>"
+                                       name="search"></td>
+                            <td id="inhalte"></td>
+                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
+                                       name="search"></td>
+                            <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
+                                       name="search"></td>
+                        </tr>
+                    </form>
+                    <?php
+                } else {
+                    echo "";
+                }
+            }
+        } else if (isset($shuffle)) {
+            $i = 1;
+            $playlist = array();
+            while ($rows = mysqli_fetch_assoc($result)) {
+
+                $playlist[] = $rows['ID'];
+                shuffle($playlist);
+                $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
+                $loadSource = $loadSource + 1;
+            }
+            while (15 > $i){
+                $id = array();
+                $id = "SELECT * FROM Music WHERE id = '$playlist[i]'";
+                $artist = $id['Artist'] ;
+                $album = $id['Album'] ;
+                $song = $id['Song'] ;
+                $genre = $id['Genre'] ;
+                $i = $i+1;
+                ?>
+                <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
+                    <tr>
+                        <td><input type="submit" class="tableForm" value="<?php echo $artist?>"
+                                   name="band"></td>
+                        <td><input type="submit" class="tableForm" value="<?php echo $album ?> "
+                                   name="search"></td>
+                        <td id="inhalte"></td>
+                        <td><input type="submit" class="tableForm" value="<?php echo $song ?> "
+                                   name="search"></td>
+                        <td><input type="submit" class="tableForm" value="<?php echo $genre ?> "
+                                   name="style"></td>
+                    </tr>
+                </form>
+
+                <?php
+            }
+        }
+        ?>
+
+    </table>
+</div>
+<div class="sound">
+    <audio id="myTune" class="audio">
+        <source src="<?php echo $source[0] ?>">
+    </audio>
+    <script type="text/javascript">
+        document.getElementById('myTune').addEventListener("ended", function () {
+            <?php
+            $i = $i + 1;
+            nextSong($source[$i]);
+            ?>
+        });
+
+    </script>
+    <?php
+
+    function nextSong($source)
+    {
+        ?>
+        <audio id="myTune" class="audio">
+            <source src="<?php echo $source ?>">
+        </audio>
+        <?php
+    }
+
+    ?>
+</div>
+<div class="knopf">
+
+    <button class="buttoncool" id="play" onclick="document.getElementById('myTune').play()"><i class="fas fa-play"></i>
+    </button>
+    <button class="buttoncool" id="pause" onclick="document.getElementById('myTune').pause()"><i
+                class="fas fa-pause"></i></button>
+    <button class="buttoncool" id="reset"
+            onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">
+        <i class="fas fa-undo-alt"></i>
+    </button>
+    <button class="buttoncool" id="up" onclick="document.getElementById('myTune').volume+=0.1"><i class="fas fa-plus">
+    </button>
+    <button class="buttoncool" id="speed" onclick="document.getElementById('myTune').currentTime+=30"><i
+                class="fas fa-forward"></i>
 
 
-        </button>
-        <button class="buttoncool" id="down" onclick="document.getElementById('myTune').volume-=0.1"><i class="fas fa-minus"></i>
-        </button>
-        <button class="buttoncool" id="mute" onclick="document.getElementById('myTune').volume-=1"><i class="fas fa-volume-mute"></i></button>
-        <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=1"><i class="fas fa-volume-up"></i></button>
-    </div>
+    </button>
+    <button class="buttoncool" id="down" onclick="document.getElementById('myTune').volume-=0.1"><i
+                class="fas fa-minus"></i>
+    </button>
+    <button class="buttoncool" id="mute" onclick="document.getElementById('myTune').volume-=1"><i
+                class="fas fa-volume-mute"></i></button>
+    <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=1"><i
+                class="fas fa-volume-up"></i></button>
+</div>
 
 </div>
 </body>
