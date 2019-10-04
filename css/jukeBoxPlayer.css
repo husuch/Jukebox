@@ -33,7 +33,7 @@ body{
         height: 100vh;
         margin: 0;
         padding: 0;
-        grid-template-columns: 20% 10% 10% Auto 145px;
+        grid-template-columns: 20% 30% 30% 145px;
         grid-template-rows: 50px 10% 50% 45% Auto Auto;
 
     }
@@ -48,13 +48,31 @@ body{
     .audio{
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 2;
+        grid-row-start: 5;
         grid-row-end: 6;
+
+
     }
 
     .knopf{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin-top: 60px;
+        margin-left: 20px;
+    }
+
+    .sound{
         grid-column-start: 3;
         grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+    }
+    .playlistliste{
+        grid-column-start: 1;
+        grid-column-end: 7;
         grid-row-start: 2;
         grid-row-end: 3;
     }
@@ -241,6 +259,7 @@ table{
 }
 
 th, td {
+
     outline: none;
     border: none;
     /*
@@ -269,6 +288,7 @@ th, td {
 
 
 th{
+
     text-decoration: underline overline;
     padding: 0px 75px;
     font-size: 190%;
@@ -277,6 +297,7 @@ th{
 
 }
 td{
+
     font-size: 100%;
     font-weight: lighter;
     text-align:center;

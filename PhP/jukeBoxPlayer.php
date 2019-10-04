@@ -8,6 +8,7 @@
     <title>Jukebox</title>
 </head>
 <body>
+<div id="bg">
 <div class="grid-box">
     <form action="jukeBoxPlayer.php" class="topNav" method="POST">
 
@@ -41,10 +42,9 @@
         <tr>
             <th>Artist</th>
             <th>Album</th>
-            <td id="mitte" width="494px"></td>
+            <td id="mitte" width="500px"></td>
             <th>Song</th>
             <th>Genre</th>
-            <th>Anz.</th>
         </tr>
 
         <?php
@@ -124,10 +124,9 @@
                                        name="search"></td>
                             <td id="inhalte"></td>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
-                                       name="search"></td>
+                                       name="search"><?php echo $rows['callup'];?></td>
                             <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
                                        name="search"></td>
-                            <td><?php echo $rows['callup'];?></td>
                         </tr>
                     </form>
                     <?php
@@ -165,7 +164,7 @@
                                    name="search"></td>
                         <td id="inhalte"></td>
                         <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
-                                   name="search"></td>
+                                   name="search"><?php echo $rows['callup'];?></td>
                         <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
                                    name="search"></td>
                     </tr>
@@ -230,6 +229,7 @@
                 class="fas fa-volume-mute"></i></button>
     <button class="buttoncool" id="unmute" onclick="document.getElementById('myTune').volume+=1"><i
                 class="fas fa-volume-up"></i></button>
+</div>
 </div>
 </div>
 </body>
