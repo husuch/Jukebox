@@ -40,7 +40,7 @@
 
     <div id="content">
 
-        <h2>Folgen sie Hit-Radio 68 auf</h2>
+        <h2>Folgen Sie Hit-Radio 68 auf</h2>
         <p>Facebook, Instagram</p>
     </div>
 
