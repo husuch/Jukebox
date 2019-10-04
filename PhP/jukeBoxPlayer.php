@@ -18,23 +18,6 @@
         <input type="submit" value="Jazz" name="style">
         <input type="submit" value="Disco" name="style">
         <input type="submit" value="Reggae" name="style">
-        <input type="button" onclick="formHilite" value="60's">
-        <script language="JavaScript" type="text/javascript">
-            function formHilite(ID,event)
-            {
-                if(document.getElementById)
-                {
-                    if (event=="focus")
-                    {
-                        document.getElementById(ID).style.setAttribute("backgroundImage","url(../background/background1.png)",true);
-                        return true;}
-                    else
-                    {
-                        document.getElementById(ID).style.setAttribute("backgroundImage","url(../background/background3.png)",true);
-                        return true;}
-                }
-            }
-            </script>
         <input id="shuffle" type="submit" value="shuffle" name="shuffle" style="background-color: green">
         <div class="search-container">
             <form action="jukeBoxPlayer.php" method="post">
@@ -181,7 +164,7 @@
                                    name="search"></td>
                         <td id="inhalte"></td>
                         <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
-                                   name="search"></td>
+                                   name="search"><?php echo $rows['callup'];?></td>
                         <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
                                    name="search"></td>
                     </tr>
