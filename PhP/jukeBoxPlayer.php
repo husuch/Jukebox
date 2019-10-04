@@ -51,7 +51,9 @@
         include_once("../Database/connection.php");
         $con = new mysqli("localhost", "root", "", "jukebox");
         $select = "Select * from music ";
+        $randomSelect = "SELECT * FROM music ORDER BY rand() limit 15";
         $result = mysqli_query($con, $select);
+        $randomData = mysqli_query($con, $randomSelect);
 
         $songInput = "";
         $albumInput = "";
@@ -116,40 +118,31 @@
                 }
             }
         } else if (isset($shuffle)) {
-            $i = 1;
-            $playlist = array();
-            while ($rows = mysqli_fetch_assoc($result)) {
+            while ($rows = mysqli_fetch_array($randomData)) {
 
-                $playlist[] = $rows['ID'];
-                shuffle($playlist);
                 $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                 $loadSource = $loadSource + 1;
-            }
-            while (15 > $i){
-                $id = array();
-                $id = "SELECT * FROM Music WHERE id = '$playlist[i]'";
-                $artist = $id['Artist'] ;
-                $album = $id['Album'] ;
-                $song = $id['Song'] ;
-                $genre = $id['Genre'] ;
-                $i = $i+1;
+
                 ?>
                 <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
                     <tr>
-                        <td><input type="submit" class="tableForm" value="<?php echo $artist?>"
-                                   name="band"></td>
-                        <td><input type="submit" class="tableForm" value="<?php echo $album ?> "
+                    <tr>
+                        <td><input type="submit" class="tableForm" value="<?php echo $rows['Artist'] ?>"
+                                   name="search"></td>
+                        <td><input type="submit" class="tableForm" value="<?php echo $rows['Album'] ?>"
                                    name="search"></td>
                         <td id="inhalte"></td>
-                        <td><input type="submit" class="tableForm" value="<?php echo $song ?> "
+                        <td><input type="submit" class="tableForm" value="<?php echo $rows['Song'] ?>"
                                    name="search"></td>
-                        <td><input type="submit" class="tableForm" value="<?php echo $genre ?> "
-                                   name="style"></td>
+                        <td><input type="submit" class="tableForm" value="<?php echo $rows['Genre'] ?>"
+                                   name="search"></td>
+                    </tr>
                     </tr>
                 </form>
 
                 <?php
             }
+
         }
         ?>
 
