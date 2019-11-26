@@ -98,22 +98,7 @@
 
                     $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                     $loadSource = $loadSource + 1;
-                    $getCallUp = 0;
-                    $getIdof = 0;
-
-                    $getCallUp = $rows['callup'];
-                    $getCallUp = $getCallUp+1;
-
-                    $getIdof = $rows['ID'];
-                    $getIdof = $getIdof +1;
-
-                    $sql = "UPDATE Music SET callup ='$getCallUp' WHERE id='$getIdof'";
-
-                    if ($con->query($sql) === TRUE) {
-                        echo "";
-                    } else {
-                        echo "Error updating record: " . $con->error;
-                    }
+               
 
                     ?>
                     <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
@@ -139,20 +124,6 @@
 
                 $source[$loadSource] = "../Mp3/" . $rows['Mp3Path'];
                 $loadSource = $loadSource + 1;
-
-                $getCallUp = $rows['callup'];
-                $getCallUp = $getCallUp+1;
-
-                $getIdof = $rows['ID'];
-                $getIdof = $getIdof +1;
-
-                $sql = "UPDATE Music SET callup ='$getCallUp' WHERE id='$getIdof'";
-
-                if ($con->query($sql) === TRUE) {
-                    echo "";
-                } else {
-                    echo "Error updating record: " . $con->error;
-                }
 
                 ?>
                 <form action="jukeBoxPlayer.php" method="POST" class="tableForm">
